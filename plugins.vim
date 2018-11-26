@@ -21,6 +21,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'aaren/arrowkeyrepurpose'
+Plugin 'ap/vim-css-color'
 
 
 call vundle#end()            " required
