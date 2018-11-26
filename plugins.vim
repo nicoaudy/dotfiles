@@ -20,6 +20,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'aaren/arrowkeyrepurpose'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
