@@ -18,7 +18,7 @@ Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
-Plugin 'jwalton512/vim-blade'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
