@@ -17,12 +17,16 @@ Plugin 'ervandew/supertab'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'html', 'css'] }
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'aaren/arrowkeyrepurpose'
 Plugin 'ap/vim-css-color'
-
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'w0rp/ale'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'https://github.com/adelarsq/vim-matchit'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
