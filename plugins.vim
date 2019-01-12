@@ -25,8 +25,10 @@ Plugin 'ap/vim-css-color'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'w0rp/ale'
-Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'https://github.com/adelarsq/vim-matchit'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'epilande/vim-react-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'prettier/vim-prettier'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
