@@ -114,6 +114,9 @@ export ANDROID_HOME=/usr/local/share/android-sdk
 # enable vim mode
 bindkey -v
 
+# Load tmux by default
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # Updates editor information when the keymap changes.
 function zle-keymap-select() {
   zle reset-prompt
