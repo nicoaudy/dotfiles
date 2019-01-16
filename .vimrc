@@ -19,6 +19,9 @@ set smartcase                   			"ignore case if search pattern is all lowerca
 set mouse=a
 set laststatus=2   					" Always show the statusline
 set cursorline
+set relativenumber
+set tags=tags
+set tags+=tags,tags.vendors
 
 inoremap jj <Esc>
 imap jj <Esc>
@@ -44,7 +47,7 @@ set clipboard=unnamed
 
 
 "-----------Visuals----------"
-"favorite scheme PaperColor, deep-space, dracula, industry, deep-space
+"favorite scheme PaperColor, deep-space, dracula, industry, deep-space, minimalist
 set background=dark
 colorscheme hybrid_material
 set linespace=15
@@ -75,6 +78,10 @@ let NERDTreeHijackNetw = 0
 let NERDTreeShowHidden=1
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
+"/
+"/ Autotags
+"/
+let g:autotagTagsFile=".tags"
 
 "/
 "/ PHP namespace
@@ -92,6 +99,7 @@ function! IPhpExpandClass()
 endfunction
 autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
+let g:php_namespace_sort_after_insert = 1
 
 "https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
 vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
@@ -121,11 +129,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 "/
 "/ Prettier
 "/
-nmap <Leader>p <Plug>(Prettier)
 " when running at every change you may want to disable quickfix
-let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 "-----------Split-Management----------"			" ctrl W \ to full split, ctrl W = to normal split
 set splitbelow
@@ -139,6 +145,7 @@ nmap <Leader>ep :tabe ~/.vim/plugins.vim<cr>
 
 nmap <Leader><space> :nohlsearch<cr>					"Delete hightlight search.
 nmap <Leader>` :NERDTreeToggle<cr>
+nmap <Leader>f :tag<space>
 
 
 "-----------Search----------"
