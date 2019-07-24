@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 
-so ~/.vim/plugins.vim
+so ~/dotfiles/plugins.vim
 
 
 syntax enable
@@ -165,6 +165,12 @@ autocmd FileType vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
+
+" Indent line 
+let g:indentLine_char_list = ['|', '¦', '┆', '┊'] 
+
+" Vim move 
+let g:move_key_modifier = 'C'
 
 let g:jsx_ext_required = 1
 let g:user_emmet_install_global = 0
