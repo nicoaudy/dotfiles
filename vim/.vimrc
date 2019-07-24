@@ -1,7 +1,6 @@
 set nocompatible              " be iMproved, required
 
-so ~/dotfiles/vim/plugins.vim
-
+so ~/.vim/plugins.vim
 
 syntax enable
 
@@ -161,6 +160,7 @@ augroup autosourcing					"Automatically source the vimrc file on save.
 augroup END
 
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType typescript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
