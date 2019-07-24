@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 
-so ~/dotfiles/plugins.vim
+so ~/dotfiles/vim/plugins.vim
 
 
 syntax enable
