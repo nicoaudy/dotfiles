@@ -30,6 +30,8 @@ Plugin 'epilande/vim-react-snippets'
 Plugin 'SirVer/ultisnips'
 Plugin 'prettier/vim-prettier'
 Plugin 'craigemery/vim-autotag'
+Plugin 'Yggdroot/indentLine' 
+Plugin 'matze/vim-move'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
