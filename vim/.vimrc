@@ -48,10 +48,10 @@ set clipboard=unnamed
 "-----------Visuals----------"
 "favorite scheme PaperColor, deep-space, dracula, industry, deep-space, minimalist
 set background=dark
-colorscheme hybrid_material
+colorscheme PaperColor
 set linespace=15
 set t_CO=256						"Use 256 colors. This is the useful for terminal vim.
-set guifont=Monaco:h13
+set guifont=Monaco:h14
 
 set guioptions-=l
 set guioptions-=L
@@ -132,6 +132,12 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
+"/
+"/ Vim Bbye
+"/
+:nnoremap <Leader><Leader>q :Bdelete<CR>
+:nnoremap <Leader><Leader>w :Bwipeout<CR>
+
 "-----------Split-Management----------"			" ctrl W \ to full split, ctrl W = to normal split
 set splitbelow
 set splitright
@@ -171,6 +177,9 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " Vim move 
 let g:move_key_modifier = 'C'
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 let g:jsx_ext_required = 1
 let g:user_emmet_install_global = 0
