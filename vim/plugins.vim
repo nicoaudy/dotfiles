@@ -7,9 +7,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Garam  kehidupan
 Plugin 'tpope/vim-vinegar'				"Use - for see current file folder, shift 5 for create file, d new directory, D for delete.
+Plugin 'tpope/vim-surround'				"Change surround (cs from to) and delete surround (ds from to), cst for tag
+Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround'				"Change surround (cs from to) and delete surround (ds from to), cst for tag
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'aaren/arrowkeyrepurpose'
@@ -29,6 +30,7 @@ Plugin 'epilande/vim-react-snippets'
 
 " Display
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'rainglow/vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mhinz/vim-startify'

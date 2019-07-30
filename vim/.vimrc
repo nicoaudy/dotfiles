@@ -46,12 +46,13 @@ set clipboard=unnamed
 
 
 "-----------Visuals----------"
-"favorite scheme PaperColor, deep-space, dracula, industry, deep-space, minimalist
-set background=dark
-colorscheme PaperColor
+" favorite scheme PaperColor, deep-space, dracula, industry, deep-space, minimalist
+" bold-contrast, hybrid, grupbox
+" set background=dark
+colorscheme gruvbox
 set linespace=15
 set t_CO=256						"Use 256 colors. This is the useful for terminal vim.
-set guifont=Monaco:h14
+set guifont=Operator\ Mono\ Book\ Italic:h13
 
 set guioptions-=l
 set guioptions-=L
