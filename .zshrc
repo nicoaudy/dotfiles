@@ -2,12 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/codycrunch/.oh-my-zsh"
+export ZSH="/Users/nicoaudy/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# Favorite robbyrussell
 ZSH_THEME="dstufft"
 
 # Set list of themes to pick from when loading at random
@@ -26,8 +27,14 @@ ZSH_THEME="dstufft"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -62,9 +69,7 @@ ZSH_THEME="dstufft"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,50 +90,20 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias nah="git stash && git reset --hard && git clean -df"
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
+alias nah="git stash && git reset --hard && git clean -df"
 alias viconfig="vi ~/.vimrc"
-alias v="cd ~/Valet"
-alias rn="cd ~/Code/react/native"
-alias rw="cd ~/Code/react/web"
 alias rni="react-native run-ios"
 alias rna="react-native run-android"
 alias ns="npm start"
-alias ctags="`brew --prefix`/bin/ctags"
-alias ctags >> ~/.zshrc
-alias cphp="ctags -R --PHP-kinds=cfi"
-
-export PATH=$PATH:~/.composer/vendor/bin
-export ANDROID_HOME=/usr/local/share/android-sdk
-
-# enable vim mode
-bindkey -v
-
-# Load tmux by default
-if [ "$TMUX" = "" ]; then tmux; fi
-
-# Updates editor information when the keymap changes.
-function zle-keymap-select() {
-  zle reset-prompt
-  zle -R
-}
-
-zle -N zle-keymap-select
-
-function vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
-}
-
-# define right prompt, regardless of whether the theme defined it
-RPS1='$(vi_mode_prompt_info)'
-RPS2=$RPS1
+alias rn="~/Code/react/native"
+alias rw="~/Code/react/web"
+alias v="~/Code/valet"
+alias ptag="ctags -R --PHP-kinds=+cf"
