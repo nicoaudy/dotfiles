@@ -106,4 +106,8 @@ alias ns="npm start"
 alias rn="~/Code/react/native"
 alias rw="~/Code/react/web"
 alias v="~/Code/valet"
-alias ptag="ctags -R --PHP-kinds=+cf"
+alias ctags="`brew --prefix`/bin/ctags"
+
+# Alias ctags if you used homebrew
+alias ctags="`brew --prefix`/bin/ctags"
+alias ptag="ctags -R --PHP-kinds=+cf --exclude-.git --exclude=.js --exclude=log *"
