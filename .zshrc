@@ -110,4 +110,4 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 # Alias ctags if you used homebrew
 alias ctags="`brew --prefix`/bin/ctags"
-alias ptag="ctags -R --PHP-kinds=+cf --exclude-.git --exclude=.js --exclude=log *"
+alias ptag="ctags -R --PHP-kinds=+cf --exclude=.git --exclude=.js --exclude=log *"
