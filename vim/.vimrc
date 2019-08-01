@@ -155,6 +155,13 @@ let g:ale_linters = {
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 
+"/
+"/ PHP cs-fixer
+"/
+nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
+nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
 "-----------Split-Management----------"			" ctrl W \ to full split, ctrl W = to normal split
 set splitbelow
 set splitright

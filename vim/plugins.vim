@@ -20,6 +20,7 @@ Plugin 'ervandew/supertab'
 " PHP Related
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'stephpy/vim-php-cs-fixer'
 
 " JS Related
 Plugin 'pangloss/vim-javascript'
