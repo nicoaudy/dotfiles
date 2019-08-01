@@ -63,8 +63,8 @@ hi LineNr guibg=bg
 
 
 
-"-----------Plugins----------"						
-             
+"-----------Plugins----------"
+
 "/
 "/ Ctrl P
 "/
@@ -149,11 +149,28 @@ set statusline+=%{gutentags#statusline()}
 "/
 "/ Vim Ale
 "/
+" disable linting while typing
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_open_list = 1
+let g:ale_keep_list_window_open=0
+let g:ale_set_quickfix=0
+let g:ale_list_window_size = 5
+let g:ale_php_phpcbf_standard='PSR2'
+" let g:ale_php_phpcs_standard='phpcs.xml.dist'
+" let g:ale_php_phpmd_ruleset='phpmd.xml'
+let g:ale_fixers = {
+  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
+  \}
+let g:ale_fix_on_save = 1
 let g:ale_linters = {
 \   'php': ['php'],
 \}
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
+
+command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
+map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
 
 "/
 "/ PHP cs-fixer
@@ -196,10 +213,10 @@ autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
-" Indent line 
-let g:indentLine_char_list = ['|', '¦', '┆', '┊'] 
+" Indent line
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
-" Vim move 
+" Vim move
 let g:move_key_modifier = 'C'
 
 " set filetypes as typescript.tsx
