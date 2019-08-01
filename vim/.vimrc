@@ -19,8 +19,8 @@ set mouse=a
 set laststatus=2   					" Always show the statusline
 set cursorline
 set relativenumber
-set tags=tags
-set tags+=tags,tags.vendors
+" set tags=tags
+" set tags+=tags,tags.vendors
 
 inoremap jj <Esc>
 imap jj <Esc>
@@ -79,11 +79,6 @@ let NERDTreeShowHidden=1
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
 "/
-"/ Autotags
-"/
-let g:autotagTagsFile=".tags"
-
-"/
 "/ PHP namespace
 "/
 function! IPhpInsertUse()
@@ -139,6 +134,27 @@ autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.v
 :nnoremap <Leader><Leader>q :Bdelete<CR>
 :nnoremap <Leader><Leader>w :Bwipeout<CR>
 
+"/
+"/ Guttentag
+"/ Where to store tag files
+"/
+let g:gutentags_cache_dir = '~/.vim/gutentags'
+let g:gutentags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
+                            \ '*.phar', '*.ini', '*.rst', '*.md',
+                            \ '*vendor/*/test*', '*vendor/*/Test*',
+                            \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
+                            \ '*var/cache*', '*var/log*']
+set statusline+=%{gutentags#statusline()}
+
+"/
+"/ Vim Ale
+"/
+let g:ale_linters = {
+\   'php': ['php'],
+\}
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+
 "-----------Split-Management----------"			" ctrl W \ to full split, ctrl W = to normal split
 set splitbelow
 set splitright
@@ -181,6 +197,9 @@ let g:move_key_modifier = 'C'
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
+" update tags in background whenever you write a php file
+au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
 
 let g:jsx_ext_required = 1
 let g:user_emmet_install_global = 0

@@ -47,7 +47,7 @@ Plugin 'garbas/vim-snipmate'
 " Tag
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'craigemery/vim-autotag'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Syntax Checking
 Plugin 'w0rp/ale'
