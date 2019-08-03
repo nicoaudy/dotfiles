@@ -27,7 +27,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'epilande/vim-react-snippets'
+Plugin 'morgsmccauley/vim-react-native-snippets'
 
 " Display
 Plugin 'rafi/awesome-vim-colorschemes'
@@ -38,7 +38,7 @@ Plugin 'mhinz/vim-startify'
 
 " Code Tools
 Plugin 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'html', 'css'] }
-Plugin 'Yggdroot/indentLine' 
+Plugin 'Yggdroot/indentLine'
 Plugin 'SirVer/ultisnips'
 Plugin 'prettier/vim-prettier'
 Plugin 'ap/vim-css-color'
@@ -52,6 +52,9 @@ Plugin 'ludovicchabant/vim-gutentags'
 
 " Syntax Checking
 Plugin 'w0rp/ale'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'neomake/neomake'
+
 
 " Vim etc
 Plugin 'moll/vim-bbye'
