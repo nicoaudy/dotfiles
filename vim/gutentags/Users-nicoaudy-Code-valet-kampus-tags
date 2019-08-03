@@ -19,6 +19,7 @@ ExampleTest	/Users/nicoaudy/Code/valet/kampus/tests/Feature/ExampleTest.php	/^cl
 ExampleTest	/Users/nicoaudy/Code/valet/kampus/tests/Unit/ExampleTest.php	/^class ExampleTest extends TestCase$/;"	c
 ForgotPasswordController	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/Auth/ForgotPasswordController.php	/^class ForgotPasswordController extends Controller$/;"	c
 Handler	/Users/nicoaudy/Code/valet/kampus/app/Exceptions/Handler.php	/^class Handler extends ExceptionHandler$/;"	c
+HomeController	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/HomeController.php	/^class HomeController extends Controller$/;"	c
 Kernel	/Users/nicoaudy/Code/valet/kampus/app/Console/Kernel.php	/^class Kernel extends ConsoleKernel$/;"	c
 Kernel	/Users/nicoaudy/Code/valet/kampus/app/Http/Kernel.php	/^class Kernel extends HttpKernel$/;"	c
 LARAVEL_START	/Users/nicoaudy/Code/valet/kampus/artisan	/^define('LARAVEL_START', microtime(true));$/;"	d
@@ -39,6 +40,7 @@ __construct	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/Auth/LoginCon
 __construct	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/Auth/RegisterController.php	/^    public function __construct()$/;"	f
 __construct	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/Auth/ResetPasswordController.php	/^    public function __construct()$/;"	f
 __construct	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/Auth/VerificationController.php	/^    public function __construct()$/;"	f
+__construct	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/HomeController.php	/^    public function __construct()$/;"	f
 aliases	/Users/nicoaudy/Code/valet/kampus/config/app.php	/^    | This array of class aliases will be registered when this application$/;"	c
 as	/Users/nicoaudy/Code/valet/kampus/config/mail.php	/^    | Laravel supports both SMTP and PHP's "mail" function as drivers for the$/;"	f
 boot	/Users/nicoaudy/Code/valet/kampus/app/Providers/AppServiceProvider.php	/^    public function boot()$/;"	f
@@ -52,6 +54,7 @@ createApplication	/Users/nicoaudy/Code/valet/kampus/tests/CreatesApplication.php
 down	/Users/nicoaudy/Code/valet/kampus/database/migrations/2014_10_12_000000_create_users_table.php	/^    public function down()$/;"	f
 down	/Users/nicoaudy/Code/valet/kampus/database/migrations/2014_10_12_100000_create_password_resets_table.php	/^    public function down()$/;"	f
 handle	/Users/nicoaudy/Code/valet/kampus/app/Http/Middleware/RedirectIfAuthenticated.php	/^    public function handle($request, Closure $next, $guard = null)$/;"	f
+index	/Users/nicoaudy/Code/valet/kampus/app/Http/Controllers/HomeController.php	/^    public function index()$/;"	f
 loader	/Users/nicoaudy/Code/valet/kampus/artisan	/^| Composer provides a convenient, automatically generated class loader$/;"	c
 loader	/Users/nicoaudy/Code/valet/kampus/public/index.php	/^| Composer provides a convenient, automatically generated class loader for$/;"	c
 map	/Users/nicoaudy/Code/valet/kampus/app/Providers/RouteServiceProvider.php	/^    public function map()$/;"	f

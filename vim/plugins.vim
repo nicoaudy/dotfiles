@@ -44,6 +44,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'ap/vim-css-color'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'garbas/vim-snipmate'
+Plugin 'Valloric/YouCompleteMe'
 
 " Tag
 Plugin 'jiangmiao/auto-pairs'
