@@ -56,6 +56,10 @@ Plugin 'w0rp/ale'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
 
+" Git
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+
 
 " Vim etc
 Plugin 'moll/vim-bbye'

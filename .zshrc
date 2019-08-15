@@ -8,8 +8,8 @@ export ZSH="/Users/nicoaudy/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# Favorite robbyrussell
-ZSH_THEME="dstufft"
+# Favorite robbyrussell, dstufft
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,14 +100,15 @@ export LC_ALL=en_US.UTF-8
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias nah="git stash && git reset --hard && git clean -df"
-alias viconfig="vi ~/.vimrc"
-alias rni="react-native run-ios"
-alias rna="react-native run-android"
-alias ns="npm start"
+alias vimconfig="vi ~/.vimrc"
 alias rn="~/Code/react/native"
 alias rw="~/Code/react/web"
 alias v="~/Code/valet"
-alias ctags="`brew --prefix`/bin/ctags"
+alias c="~/Code"
+alias rni="react-native run-ios"
+alias rna="react-native run-android"
+alias ns="npm start"
+alias rnsc="react-native start --reset-cache"
 
 # Alias ctags if you used homebrew
 alias ctags="`brew --prefix`/bin/ctags"
@@ -116,3 +117,8 @@ alias ptag="ctags -R --PHP-kinds=+cf --exclude=.git --exclude='*.js' --exclude=l
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export NVM_DIR=~/.nvm

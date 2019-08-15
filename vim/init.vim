@@ -55,9 +55,10 @@ set splitright
 " minimalist, bold-contrast, hybrid, gruvbox
 " set background=light
 colorscheme gruvbox
+let g:impact_transbg=1
 set linespace=15
 " Use 256 colors. This is the useful for terminal vim.
-set t_CO=256
+" set t_CO=256
 " Gui option
 hi LineNr guibg=bg
 set guifont=Operator\ Mono\ Book\ Italic:h13
@@ -249,6 +250,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 "/
+"/ Airline
+"/
+let g:airline_theme='deus'
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=1
+
 "/ NeoMake
 "/
 " When writing a buffer (no delay).
