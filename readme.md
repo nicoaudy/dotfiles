@@ -25,5 +25,8 @@ chmod +x vim-install.sh
 chmod +x vim-save.sh
 ```
 
+### Others
+- iterm scheme (arthur)
+
 
 Save changes vim from machine using vim-save script. For install to new machine using vim-install script.
