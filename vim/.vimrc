@@ -268,6 +268,11 @@ call neomake#configure#automake('rw', 1000)
 " normal mode (after 1s; no delay when writing).
 call neomake#configure#automake('nrwi', 500)
 
+"/ Multiple Cursor
+"/
+"
+
+
 "---------------------
 "
 " AUTOCOMMAND

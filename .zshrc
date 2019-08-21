@@ -114,11 +114,9 @@ alias rnsc="react-native start --reset-cache"
 alias ctags="`brew --prefix`/bin/ctags"
 alias ptag="ctags -R --PHP-kinds=+cf --exclude=.git --exclude='*.js' --exclude=log * --exclude=node_modules 2>/dev/null"
 
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-fi
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export NVM_DIR=~/.nvm
+# change $HOME to the path where you installed android Sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools

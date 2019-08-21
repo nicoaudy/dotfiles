@@ -16,6 +16,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'aaren/arrowkeyrepurpose'
 Plugin 'matze/vim-move'
 Plugin 'ervandew/supertab'
+Plugin 'terryma/vim-multiple-cursors'
 
 " PHP Related
 Plugin 'StanAngeloff/php.vim'
