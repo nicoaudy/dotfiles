@@ -50,7 +50,7 @@ Plugin 'Valloric/YouCompleteMe'
 " Tag
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'ludovicchabant/vim-gutentags'
 
 " Syntax Checking
 Plugin 'w0rp/ale'
