@@ -28,6 +28,6 @@ cp -R -f "snippets" "$user_dir"
 
 # add functionality to open sublime in terminal using subl .
 echo "Symlink sublime open in terminal functionality"
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 echo "Done. Launch Sublime and press ctrl +\` for a status!"
