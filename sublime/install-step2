@@ -17,5 +17,7 @@ mkdir -p "$user_dir"
 
 echo "Configuring User Settings..."
 cp -f "Preferences.sublime-settings" "$user_dir"
+cp -f "Default (OSX).sublime-keymap" "$user_dir"
+cp -R -f "snippets" "$user_dir"
 
 echo "Done. Launch Sublime!"
