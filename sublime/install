@@ -20,4 +20,10 @@ curl -fsSL "https://sublime.wbond.net/Package Control.sublime-package" -o "$pack
 echo "Configuring desired packages"
 cp -f "Package Control.sublime-settings" "$user_dir"
 
+echo "Configuring User Settings..."
+cp -f "Preferences.sublime-settings" "$user_dir"
+cp -f "Default (OSX).sublime-keymap" "$user_dir"
+cp -f "Default.sublime-theme" "$user_dir"
+cp -R -f "snippets" "$user_dir"
+
 echo "Done. Launch Sublime and press ctrl +\` for a status!"
