@@ -7,7 +7,7 @@
       ]
   },
   { "keys": ["ctrl+e"], "command": "expand_fqcn" },
-  { "keys": ["shift+f6"], "command": "expand_fqcn", "args": {"leading_separator": true} },
+  { "keys": ["ctrl+E"], "command": "expand_fqcn", "args": {"leading_separator": true} },
   { "keys": ["ctrl+i"], "command": "find_use" },
   { "keys": ["ctrl+c"], "command": "insert_php_constructor_property" },
   {
