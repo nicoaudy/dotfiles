@@ -24,6 +24,8 @@ echo "Configuring User Settings..."
 cp -f "Preferences.sublime-settings" "$user_dir"
 cp -f "Default (OSX).sublime-keymap" "$user_dir"
 cp -f "Default.sublime-theme" "$user_dir"
+cp -f "PHP Companion.sublime-settings" "$user_dir"
+cp -f "SublimePhpCsFixer.sublime-settings" "$user_dir"
 cp -R -f "snippets" "$user_dir"
 
 # add functionality to open sublime in terminal using subl .
