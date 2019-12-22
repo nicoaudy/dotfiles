@@ -10,4 +10,8 @@ Installing should be like 3 steps:
 - Once the console output shows something like `ignored packages updated to: ["Vintage"]`, the package installation and configure user settings is done.
 - Close Sublime Text 3
 
+## PHPcs
+- [Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+- [Cs Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+
 Done!
