@@ -24,4 +24,8 @@
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false,
 	"hot_exit": false,
+	"ensure_newline_at_eof_on_save": true,
+	"save_on_focus_lost": true,
+	"close_window_when_empty": true,
+	"caret_style": "phase"
 }
