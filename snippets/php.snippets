@@ -10,6 +10,18 @@ snippet pmet
 		${2}
 	}
 
+snippet pimet
+	private function ${1}()
+	{
+		${2}
+	}
+
+snippet cl
+	class ${1}
+	{
+		${2}
+	}
+
 snippet rg
 	Route::get('${1}', '${2}');
 
@@ -25,3 +37,27 @@ snippet rpa
 	Route::post('${1}', function(){
 		${2}
 	});
+
+snippet @if
+	@if(${1})
+		{$2}
+	@endif
+
+snippet @ife
+	@if(${1})
+		{$2}
+	@else
+		{$3}
+	@endif
+
+snippet @for
+	@foreach(${1} as ${2})
+		${3}
+	@endforeach
+
+snippet @fore
+	@forelse(${1} as ${2})
+		${3}
+	@empty
+		${4}
+	@endforeach
