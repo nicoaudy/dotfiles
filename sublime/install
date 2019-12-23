@@ -2,6 +2,7 @@
 
 # Sublime Text 3 setup script. Part 1
 
+home="$HOME"
 sublime_dir="$HOME/Library/Application Support/Sublime Text 3"
 packages_dir="$sublime_dir/Installed Packages"
 user_dir="$sublime_dir/Packages/User"
@@ -27,6 +28,9 @@ cp -f "Default.sublime-theme" "$user_dir"
 cp -f "PHP Companion.sublime-settings" "$user_dir"
 cp -f "SublimePhpCsFixer.sublime-settings" "$user_dir"
 cp -R -f "snippets" "$user_dir"
+
+echo "Configure CSfixer"
+cp -f ".phpcsfixer" "$home"
 
 # add functionality to open sublime in terminal using subl .
 echo "Symlink sublime open in terminal functionality"
