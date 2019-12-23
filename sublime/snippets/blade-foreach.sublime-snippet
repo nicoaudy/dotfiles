@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+@foreach (${1:\$array} as ${2:\$element})
+    ${3:{{-- expr --\}\}}
+@endforeach$0
+]]></content>
+    <tabTrigger>foreach</tabTrigger>
+    <scope>text.blade</scope>
+</snippet>

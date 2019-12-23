@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+@forelse (${1:\$array} as ${2:\$element})
+    ${3:{{-- expr --\}\}}
+@empty
+    ${4:{{-- empty expr --\}\}}
+@endforelse$0
+]]></content>
+    <tabTrigger>fore</tabTrigger>
+    <scope>text.blade</scope>
+</snippet>

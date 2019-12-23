@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+@if (${1:condition})
+    ${2:{{-- expr --\}\}}
+@endif$0
+]]></content>
+    <tabTrigger>if</tabTrigger>
+    <scope>text.blade</scope>
+</snippet>

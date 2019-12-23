@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+@each ('${1:item.view}', ${2:\$items}, '${3:item}', '${4:empty.view}')$0
+]]></content>
+    <tabTrigger>each</tabTrigger>
+    <scope>text.blade</scope>
+</snippet>
