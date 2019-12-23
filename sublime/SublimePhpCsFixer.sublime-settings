@@ -1,3 +1,4 @@
 {
-	"on_save": true
+	"on_save": true,
+	"config": "~/.phpcsfixer"
 }
