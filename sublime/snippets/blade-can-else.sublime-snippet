@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+@can('${1}')
+    ${2}
+@else
+    ${3}
+@endcan$0
+]]></content>
+    <tabTrigger>cane</tabTrigger>
+    <scope>text.blade</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+@can('${1}')
+    ${2}
+@endcan
+]]></content>
+    <tabTrigger>can</tabTrigger>
+    <scope>text.blade</scope>
+</snippet>
