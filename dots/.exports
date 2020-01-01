@@ -1,0 +1,13 @@
+export EDITOR=vim
+
+export NVM_DIR="$HOME/.nvm"
+
+DOTFILES_EXPORT="$HOME/dotfiles/bin"
+LOCAL_BIN_EXPORT="/usr/local/bin"
+LOCAL_SBIN_EXPORT="/usr/local/sbin"
+YARN_BIN_EXPORT="$HOME/.config/yarn/global/node_modules/.bin"
+COMPOSER_BIN_EXPORT="$HOME/.composer/vendor/bin"
+SVN_BIN_EXPORT="/opt/subversion/bin"
+SQLITE_BIN_EXPORT="/usr/local/opt/sqlite/bin"
+
+export PATH="$DOTFILES_EXPORT:$LOCAL_BIN_EXPORT:$LOCAL_SBIN_EXPORT:$YARN_BIN_EXPORT:$COMPOSER_BIN_EXPORT:$SVN_BIN_EXPORT:$SQLITE_BIN_EXPORT:$PATH"

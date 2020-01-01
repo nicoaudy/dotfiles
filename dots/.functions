@@ -1,0 +1,68 @@
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+function artisan() {
+    php artisan "$@"
+}
+
+man() {
+	env \
+		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+		LESS_TERMCAP_md=$(printf "\e[1;31m") \
+		LESS_TERMCAP_me=$(printf "\e[0m") \
+		LESS_TERMCAP_se=$(printf "\e[0m") \
+		LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+		LESS_TERMCAP_ue=$(printf "\e[0m") \
+		LESS_TERMCAP_us=$(printf "\e[1;32m") \
+			man "$@"
+}
+
+function mk() {
+	mkdir -p "$@" && cd "$@"
+}
+
+function e() {
+    if [[ ! -f .env ]]; then
+        echo -e "${RED}Error: .env file does not exists${NC}" && return
+    fi
+
+    cat .env @ $1
+}
+
+extract () {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)  tar -jxvf $1                        ;;
+            *.tar.gz)   tar -zxvf $1                        ;;
+            *.bz2)      bunzip2 $1                          ;;
+            *.dmg)      hdiutil mount $1                    ;;
+            *.gz)       gunzip $1                           ;;
+            *.tar)      tar -xvf $1                         ;;
+            *.tbz2)     tar -jxvf $1                        ;;
+            *.tgz)      tar -zxvf $1                        ;;
+            *.zip)      unzip $1                            ;;
+            *.ZIP)      unzip $1                            ;;
+            *.pax)      cat $1 | pax -r                     ;;
+            *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
+            *.rar)      unrar x $1                          ;;
+            *.Z)        uncompress $1                       ;;
+            *)          echo -e "${RED}Error: '$1' cannot be extracted/mounted via extract()${NC}" ;;
+        esac
+    else
+        echo "${RED}Error: '$1' is not a valid file${NC}"
+    fi
+}
+
+function xterm_title_precmd () {
+    print -Pn '\e]2;%~\a'
+}
+
+function xterm_title_preexec () {
+    print -Pn '\e]2;'
+    print -n "${(q)1}\a"
+}
+
+function sphp() {
+    brew-php-switcher "$@" -c=valet
+}

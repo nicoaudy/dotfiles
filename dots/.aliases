@@ -1,0 +1,20 @@
+alias nah="git stash && git reset --hard && git clean -df"
+alias c='clear'
+alias .='pwd'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias t='./vendor/bin/phpunit'
+alias clean='artisan cache:clear && artisan view:clear && artisan clear-compiled && artisan route:clear && artisan config:clear && artisan config:cache && artisan route:cache'
+alias path='echo $PATH | tr -s ":" "\n"'
+
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
+
+alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+alias -g @="| grep -i"

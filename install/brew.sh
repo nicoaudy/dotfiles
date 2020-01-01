@@ -54,6 +54,7 @@ brew 'php@7.3'
 brew 'php-code-sniffer'
 brew 'pkg-config'
 brew 'imagemagick'
+brew 'php-cs-fixer'
 
 # Database & servers
 brew 'dnsmasq'
