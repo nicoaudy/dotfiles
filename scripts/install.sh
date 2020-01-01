@@ -3,7 +3,7 @@ mkdir -p $HOME/.vim/
 cp -i ../vim/.vimrc $HOME/.vimrc
 cp -i ../vim/plugins.vim $HOME/.vim/plugins.vim
 cp -i -r ../vim/snippets $HOME/.vim/
-cp -i -r ../vim/bundle $HOME/.vim/
+# cp -i -r ../vim/bundle $HOME/.vim/
 
 # Copy zsh
 cp -i ../.zshrc $HOME/.zshrc
