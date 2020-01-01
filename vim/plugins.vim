@@ -47,7 +47,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/MatchTagAlways'
 
-# Tags
+" Tags
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 

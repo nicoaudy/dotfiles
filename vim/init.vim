@@ -262,9 +262,6 @@ autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
-" update tags in background whenever you write a php file
-au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
-
 let g:jsx_ext_required = 1
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<leader>z'

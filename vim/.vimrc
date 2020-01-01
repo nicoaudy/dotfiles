@@ -31,8 +31,8 @@ set showmode
 set title
 set showcmd
 if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
+    set relativenumber
+    au BufReadPost * set relativenumber
 endif
 " Display extra whitespace.
 set list listchars=tab:»·,trail:·
@@ -69,6 +69,7 @@ set guioptions-=R
 
 " Indent line
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
 " Vim move
 let g:move_key_modifier = 'C'
 
@@ -113,23 +114,17 @@ nmap <Leader>f :tag<space>
 "
 "---------------------
 
-"/
-"/ Ctrl P
-"/
+" ----- ctrlpvim/ctrlp.vim settings -----
 let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,result:30'
 
-"/
-"/ NerdTree
-"/
+" ----- scrooloose/nerdtree settings -----
 let NERDTreeHijackNetw = 0
 let NERDTreeShowHidden=1
 nmap <Leader>` :NERDTreeToggle<cr>
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
-"/
-"/ PHP namespace
-"/
+" ----- arnaud-lb/vim-php-namespace settings -----
 function! IPhpInsertUse()
     call PhpInsertUse()
     call feedkeys('a',  'n')
@@ -148,16 +143,12 @@ let g:php_namespace_sort_after_insert = 1
 "https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
 vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
 
-"/
-"/ Emmet
-"/
+" ----- mattn/emmet-vim settings -----
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 let g:user_emmet_leader_key='<Leader>z'
 
-"/
-"/ AlwaysTagMatch
-"/
+" ----- Valloric/MatchTagAlways settings -----
 let g:mta_use_matchparen_group = 1
 let g:mta_filetypes = {
     \ 'html' : 1,
@@ -165,49 +156,23 @@ let g:mta_filetypes = {
     \ 'javascript' : 1,
     \}
 
-"/
-"/ Utilsnips
-"/
-" make YCM compatible with UltiSnips (using supertab)
+" ----- SirVer/ultisnips settings -----
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-
-"/
-"/ Prettier
-"/
-" when running at every change you may want to disable quickfix
+" ----- prettier/vim-prettier settings -----
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-"/
-"/ Vim Bbye
-"/
+" ----- moll/vim-bbye settings -----
 :nnoremap <Leader><Leader>q :Bdelete<CR>
 :nnoremap <Leader><Leader>w :Bwipeout<CR>
 
-"/
-"/ Guttentag
-"/ Where to store tag files
-"/
-let g:gutentags_cache_dir = '~/.vim/gutentags'
-let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
-                            \ '*.phar', '*.ini', '*.rst', '*.md',
-                            \ '*vendor/*/test*', '*vendor/*/Test*',
-                            \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
-                            \ '*var/cache*', '*var/log*']
-set statusline+=%{gutentags#statusline()}
-
-"/
-"/ Vim Ale
-"/
-" disable linting while typing
+" ----- w0rp/ale settings -----
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
@@ -230,47 +195,49 @@ let g:ale_linters = {
 command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
 map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
 
-"/
-"/ PHP cs-fixer
-"/
+" ----- stephpy/vim-php-cs-fixer settings -----
 nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
 nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
-"/
-"/ Syntastic
-"/
+" ----- vim-syntastic/syntastic settings -----
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+let g:syntastic_quiet_messages={'level': 'warnings'}
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"/
-"/ Airline
-"/
+augroup mySyntastic
+  au!
+  au FileType tex let b:syntastic_mode = "passive"
+augroup END
+
+" ----- vim-airline/vim-airline settings -----
 let g:airline_theme='deus'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 
-"/ NeoMake
-"/
-" When writing a buffer (no delay).
-call neomake#configure#automake('w')
-" When writing a buffer (no delay), and on normal mode changes (after 750ms).
-call neomake#configure#automake('nw', 750)
-" When reading a buffer (after 1s), and when writing (no delay).
-call neomake#configure#automake('rw', 1000)
-" Full config: when writing or reading a buffer, and on changes in insert and
-" normal mode (after 1s; no delay when writing).
-call neomake#configure#automake('nrwi', 500)
+" ----- xolox/vim-easytags settings -----
+" Where to look for tags files
+set tags=~/.vimtags
+" Sensible defaults
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+let g:easytags_async = 1
+let g:easytags_dynamic_files = 2
+let g:easytags_resolve_links = 1
+let g:easytags_suppress_ctags_warning = 1
 
-"/ Multiple Cursor
-"/
-"
+" ----- airblade/vim-gitgutter settings -----
+" Required after having changed the colorscheme
+hi clear SignColumn
+" In vim-airline, only display "hunks" if the diff is non-zero
+let g:airline#extensions#hunks#non_zero_only = 1
 
 
 "---------------------
@@ -281,8 +248,8 @@ call neomake#configure#automake('nrwi', 500)
 
 "Automatically source the vimrc file on save.
 augroup autosourcing
-	autocmd!
-	autocmd BufWritePost .vimrc source %
+    autocmd!
+    autocmd BufWritePost .vimrc source %
 augroup END
 
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -294,9 +261,6 @@ autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-
-" update tags in background whenever you write a php file
-au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
 
 let g:jsx_ext_required = 1
 let g:user_emmet_install_global = 0
