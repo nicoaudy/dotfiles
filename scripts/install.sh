@@ -6,7 +6,7 @@ cp -i -r ../vim/snippets $HOME/.vim/
 # cp -i -r ../vim/bundle $HOME/.vim/
 
 # Copy zsh
-cp -i ../.zshrc $HOME/.zshrc
+# cp -i ../.zshrc $HOME/.zshrc
 
 # Get Vundle plugin
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
