@@ -186,11 +186,14 @@ let g:ale_php_phpcbf_standard='PSR2'
 let g:ale_fixers = {
   \ '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
+  \ 'javascript': ['eslint'],
   \}
 let g:ale_fix_on_save = 1
+let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \   'php': ['php'],
 \}
+let g:airline#extensions#ale#enabled = 1
 
 command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
 map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
