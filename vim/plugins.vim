@@ -12,7 +12,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
 Plugin 'aaren/arrowkeyrepurpose'
 Plugin 'matze/vim-move'
 Plugin 'ervandew/supertab'
@@ -28,14 +27,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'morgsmccauley/vim-react-native-snippets'
 
 " Display
-Plugin 'rafi/awesome-vim-colorschemes'
-Plugin 'rainglow/vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mhinz/vim-startify'
 
 " Code Tools
 Plugin 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'html', 'css'] }
@@ -47,20 +43,21 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'garbas/vim-snipmate'
 Plugin 'Valloric/YouCompleteMe'
 
-" Tag
+" Pairs
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/MatchTagAlways'
-" Plugin 'ludovicchabant/vim-gutentags'
+
+# Tags
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " Syntax Checking
 Plugin 'w0rp/ale'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'neomake/neomake'
 
 " Git
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-
 
 " Vim etc
 Plugin 'moll/vim-bbye'
