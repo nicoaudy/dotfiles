@@ -1,20 +1,72 @@
+# PHP
+alias t="vendor/bin/phpunit"
+alias phpunitw="phpunit-watcher watch"
+
+# Composer
+alias c="composer"
+alias cu="composer update"
+alias cr="composer require"
+alias ci="composer install"
+alias cdo="composer dump-autoload -o"
+
+# Artisan
+alias a="php artisan"
+alias mfs='php artisan migrate:fresh --seed'
+alias clean='a cache:clear && artisan view:clear && artisan clear-compiled && artisan route:clear && artisan config:clear && artisan config:cache && artisan route:cache'
+
+# Git
 alias nah="git stash && git reset --hard && git clean -df"
+alias gc="git checkout"
+alias gpo="git push origin"
+alias gm="git merge"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Fast open
+alias o="open ."
+
+# List all files colorized in long format
+alias l="ls -laF"
+
+# Redis
+alias flush-redis="redis-cli FLUSHALL"
+
+# VSCode
+alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Flush Directory Service cache
+alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
+
+# Lock the screen
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
+# Scape webpage
+alias scrape="scrapeUrl"
+
+# Move
 alias c='clear'
 alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
-alias t='./vendor/bin/phpunit'
-alias clean='artisan cache:clear && artisan view:clear && artisan clear-compiled && artisan route:clear && artisan config:clear && artisan config:cache && artisan route:cache'
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# Utils
+alias hostfile="sudo vi /etc/hosts"
+alias sshconfig="vi ~/.ssh/config"
+alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
 alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
-
-alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
 alias -g @="| grep -i"
