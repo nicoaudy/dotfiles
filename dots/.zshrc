@@ -9,7 +9,7 @@ export ZSH="/Users/nicoaudy/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # Favorite robbyrussell, dstufft
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -120,3 +120,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # change $HOME to the path where you installed android Sdk
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:/Users/nicoaudy/flutter/bin
+export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
