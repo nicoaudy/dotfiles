@@ -1,0 +1,104 @@
+snippet break "@break"
+	@break
+
+snippet component "@component directive"
+	@component('$1')
+		${2:${VISUAL}}
+	@endcomponent
+
+snippet each "@each directive"
+	@each('$1', $$2, '$3')
+
+snippet else "@else directive"
+	@else
+
+snippet eif "@else if directive"
+	@else if ($1)
+	${2:${VISUAL}}
+
+snippet for "@for directive"
+	@for ($1)
+		${2:${VISUAL}}
+	@endfor
+
+snippet foreach "@foreach directive"
+	@foreach ($$1 as $$2)
+		${3:${VISUAL}}
+	@endforeach
+
+snippet extends "@extends directive"
+	@extends('$1')
+
+snippet if "@if directive"
+	@if ($1)
+		${2:${VISUAL}}
+	@endif
+
+snippet ife "@if @else structure"
+	@if ($1)
+		${2:${VISUAL}}
+	@else
+		${3:${VISUAL}}
+	@endif
+
+snippet include "@include directive"
+	@include('$1')
+
+snippet includeIf "@includeIf directive"
+	@includeIf('$1')
+
+snippet isset "@isset directive"
+	@isset
+		${1:${VISUAL}}
+	@endisset
+
+snippet inject "@inject directive"
+	@inject('$1', '$2')
+
+snippet lang "@lang directive" i
+	@lang('$1')
+
+snippet php "@php directive"
+	@php
+		${1:${VISUAL}}
+	@endphp
+
+snippet push "@push directive"
+	@push('$1')
+		${2:${VISUAL}}
+	@endpush
+
+snippet section "@section directive"
+	@section('$1')
+
+snippet show "@show directive"
+	@show
+
+snippet slot "@slot directive"
+	@slot('$1')
+		${2:${VISUAL}}
+	@endslot
+
+snippet unless "@unless directive"
+	@unless
+		${1:${VISUAL}}
+	@endunless
+
+snippet verbatim "@verbatim directive"
+	@verbatim
+		${0:$VISUAL}
+	@endverbatim
+
+snippet wh "@while directive"
+	@while ($1)
+		${2:${VISUAL}}
+	@endwhile
+
+snippet yield "@yield directive"
+	@yield('$1')
+
+snippet { "{{ }} statement." i
+	{{ $1 }}
+
+snippet {! "{!! !!} statement" i
+	{!! $1 !!}
