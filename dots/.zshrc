@@ -97,22 +97,8 @@ export LC_ALL=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vi ~/.zshrc"
-alias ohmyzsh="vi ~/.oh-my-zsh"
-alias nah="git stash && git reset --hard && git clean -df"
-alias vimconfig="vi ~/.vimrc"
-alias rn="~/Code/react/native"
-alias rw="~/Code/react/web"
-alias v="~/Code/valet"
-alias c="~/Code"
-alias rni="react-native run-ios"
-alias rna="react-native run-android"
-alias ns="npm start"
-alias rnsc="react-native start --reset-cache"
-
-# Alias ctags if you used homebrew
-alias ctags="`brew --prefix`/bin/ctags"
-alias ptag="ctags -R --PHP-kinds=+cf --exclude=.git --exclude='*.js' --exclude=log * --exclude=node_modules 2>/dev/null"
+source /Users/nicoaudy/.bash_profile
+eval $(thefuck --alias)
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -122,5 +108,3 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:/Users/nicoaudy/flutter/bin
 export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
-
-eval $(thefuck --alias)
