@@ -10,6 +10,12 @@ fi
 brew update
 brew upgrade
 
+# Cask
+brew tap caskroom/cask
+brew install brew-cask
+brew tap caskroom/versions
+
+
 # Taps
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
@@ -68,10 +74,6 @@ sleep 1
 echo "Success! Basic brew packages are installed."
 echo "Use pecl install <package> to install additional PHP extensions. Example: pecl install imagick"
 
-# Cask
-brew tap caskroom/cask
-brew install brew-cask
-brew tap caskroom/versions
 
 # Install cask packages
 
@@ -95,6 +97,7 @@ brew cask install --appdir="/Applications" apple-juice
 brew cask install --appdir="/Applications" avibrazil-rdm
 brew cask install --appdir="/Applications" bartender
 brew cask install --appdir="/Applications" flux
+brew cask install --appdir="/Applications" dockutil
 
 # Browsers and drives
 brew cask install --appdir="/Applications" firefox
