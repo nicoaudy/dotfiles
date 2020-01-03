@@ -42,6 +42,7 @@ brew install unrar
 brew install wifi-password
 brew install sqlite
 brew install potrace
+brew install ctags
 
 # Binaries
 brew 'tree'
