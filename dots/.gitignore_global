@@ -1,8 +1,37 @@
+# Mac OS X hidden files
 .DS_Store
+.DS_Store?
 .DB_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Vim swap files
+.*.sw?
+
+# PhpStorm
+.idea
+
+# vs code
+.vscode
+
+# Sublime Text
+*.sublime-project
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+.phpunit-watcher-cache.php
+.phpunit.result.cache
+
+# Tags
+tags
+
 /vendor
 /node_modules
 /brew_components
-.idea
 
 !.gitkeep
