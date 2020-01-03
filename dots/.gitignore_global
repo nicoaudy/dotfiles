@@ -29,7 +29,10 @@ yarn-error.log
 
 # Tags
 tags
+tags.temp
+tags.cache
 
+.php_cs.cache
 /vendor
 /node_modules
 /brew_components

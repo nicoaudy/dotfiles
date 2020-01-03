@@ -10,4 +10,4 @@ ln -sfv "$DOTFILES_DIR/dots/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/oh-my-zsh/themes/taybalt.zsh-theme" ~/.oh-my-zsh/themes
 
 # Add global gitignore
-git config --global core.excludesfile ~/.global-gitignore
+git config --global core.excludesfile ~/.gitignore_global
