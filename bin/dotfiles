@@ -26,6 +26,7 @@ sub_help () {
     echo "   node             Run node setup script"
     echo "   valet            Run valet script"
     echo "   ohmyzsh          Run oh my zsh script"
+    echo "   vim              Run vim script"
     echo "   hosts            Run hosts script"
     echo "   defaults         Run MacOS defaults script"
     echo "   dock             Run MacOS dock script"
@@ -71,6 +72,11 @@ sub_valet () {
 sub_ohmyzsh () {
     . "$DOTFILES_DIR/install/oh-my-zsh.sh"
     echo -e "${GREEN}$ARROW Success! Oh my zsh command finished.${NC}"
+}
+
+sub_vim () {
+    . "$DOTFILES_DIR/install/vim.sh"
+    echo -e "${GREEN}$ARROW Success! Oh vim command finished.${NC}"
 }
 
 sub_hosts () {
