@@ -7,8 +7,6 @@ if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew tap homebrew/versions
-brew tap homebrew/dupes
 brew update
 brew upgrade
 
@@ -45,23 +43,23 @@ brew install potrace
 brew install ctags
 
 # Binaries
-brew 'tree'
-brew 'autojump'
-brew 'yarn'
+brew install tree
+brew install autojump
+brew install yarn
 
 # PHP
-brew 'composer'
-brew 'php@7.3'
-brew 'php-code-sniffer'
-brew 'pkg-config'
-brew 'imagemagick'
-brew 'php-cs-fixer'
+brew install composer
+brew install php@7.3
+brew install php-code-sniffer
+brew install pkg-config
+brew install imagemagick
+brew install php-cs-fixer
 
 # Database & servers
-brew 'dnsmasq'
-brew 'mariadb'
-brew 'nginx'
-brew 'redis'
+brew install dnsmasq
+brew install mariadb
+brew install nginx
+brew install redis
 
 # Wait a bit before moving on...
 sleep 1
@@ -94,22 +92,22 @@ brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" apple-juice
 
 # Utils
-cask 'avibrazil-rdm'
-cask 'bartender'
-cask 'flux'
+brew cask install --appdir="/Applications" avibrazil-rdm
+brew cask install --appdir="/Applications" bartender
+brew cask install --appdir="/Applications" flux
 
 # Browsers and drives
-cask 'firefox'
-cask 'google-backup-and-sync'
+brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" google-backup-and-sync
 
 # Editors and git management
-cask 'visual-studio-code'
+brew cask install --appdir="/Applications" visual-studio-code
 
 # Development
-cask 'java'
+brew cask install --appdir="/Applications" java
 
 # Others
-cask 'vlc'
+brew cask install --appdir="/Applications" vlc
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
