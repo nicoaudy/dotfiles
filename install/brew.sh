@@ -15,21 +15,9 @@ brew tap caskroom/cask
 brew install brew-cask
 brew tap caskroom/versions
 
-
-# Taps
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-versions'
-tap 'homebrew/services'
-
 # ------------------------------------------------------------------------------
 # Command line interface from brew
 # ------------------------------------------------------------------------------
-
-# Install Utilities
-brew 'bash'
-brew 'grep'
-brew 'telnet'
 
 # Install packages
 brew install iftop
@@ -66,7 +54,6 @@ brew install dnsmasq
 brew install mariadb
 brew install nginx
 brew install redis
-
 # Wait a bit before moving on...
 sleep 1
 
