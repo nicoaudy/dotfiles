@@ -6,7 +6,7 @@
   user = nicoaudy
 
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/nicoaudy/.global-gitignore
 
 [alias]
   a = "add ."
