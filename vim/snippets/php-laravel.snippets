@@ -1,0 +1,40 @@
+snippet rgr "Route Group"
+	Route::namespace('${1}')->middleware('${2}')->prefix('${3})->group(function(){
+		${4}
+	});
+
+snippet rr "Route RESOURCE"
+	Route::resource('${1}', '${2}');
+
+snippet rg "Route GET"
+	Route::get('${1}', '${2}');
+
+snippet rgc "Route GET with Callback"
+	Route::get('${1}', function(){
+		${2}
+	});
+
+snippet rp "Route POST"
+	Route::post('${1}', '${2}');
+
+snippet rpa "Route POST with Callback"
+	Route::post('${1}', function(){
+		${2}
+	});
+
+snippet rpt "Route PUT"
+	Route::put('${1}', '${2}');
+
+snippet rpta "Route PUT with Callback"
+	Route::put('${1}', function(){
+		${2}
+	});
+
+snippet rd "Route DELTE"
+	Route::delete('${1}', '${2}');
+
+snippet rda "Route DELETE with Callback"
+	Route::delete('${1}', function(){
+		${2}
+	});
+
