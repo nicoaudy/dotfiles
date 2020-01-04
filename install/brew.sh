@@ -18,6 +18,9 @@ brew tap caskroom/versions
 # ------------------------------------------------------------------------------
 # Command line interface from brew
 # ------------------------------------------------------------------------------
+brew install bash
+brew install grep
+brew install telnet
 
 # Install packages
 brew install iftop
@@ -75,8 +78,8 @@ brew cask install --appdir="/Applications" postman
 brew cask install --appdir="/Applications" teamviewer
 brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" appcleaner
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" the-unarchiver
+# brew cask install --appdir="/Applications" skype
+# brew cask install --appdir="/Applications" the-unarchiver
 brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" apple-juice
 
@@ -88,7 +91,7 @@ brew cask install --appdir="/Applications" dockutil
 
 # Browsers and drives
 brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" google-backup-and-sync
+# brew cask install --appdir="/Applications" google-backup-and-sync
 
 # Editors and git management
 brew cask install --appdir="/Applications" visual-studio-code
