@@ -53,7 +53,7 @@ set splitright
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-set background=light
+" set background=light
 colorscheme PaperColor
 let g:impact_transbg=1
 set linespace=15
