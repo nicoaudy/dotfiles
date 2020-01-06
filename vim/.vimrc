@@ -53,8 +53,8 @@ set splitright
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-" set background=light
-colorscheme gruvbox
+set background=light
+colorscheme PaperColor
 let g:impact_transbg=1
 set linespace=15
 " Use 256 colors. This is the useful for terminal vim.
@@ -181,6 +181,10 @@ let g:ale_keep_list_window_open=0
 let g:ale_set_quickfix=0
 let g:ale_list_window_size = 5
 let g:ale_php_phpcbf_standard='PSR2'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 " let g:ale_php_phpcs_standard='phpcs.xml.dist'
 " let g:ale_php_phpmd_ruleset='phpmd.xml'
 let g:ale_fixers = {
@@ -193,7 +197,6 @@ let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \   'php': ['php'],
 \}
-let g:airline#extensions#ale#enabled = 1
 
 command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
 map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
@@ -222,9 +225,10 @@ augroup mySyntastic
 augroup END
 
 " ----- vim-airline/vim-airline settings -----
-let g:airline_theme='deus'
+let g:airline_theme='papercolor'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#ale#enabled = 1
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
@@ -241,6 +245,20 @@ let g:easytags_suppress_ctags_warning = 1
 hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
+
+
+" ----- NLKNguyen/papercolor-theme settings -----
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.dark': {
+  \       'transparent_background': 1,
+  \       'override' : {
+  \         'color00' : ['#080808', '232'],
+  \         'linenumber_bg' : ['#080808', '232']
+  \       }
+  \     }
+  \   }
+  \ }
 
 
 "---------------------

@@ -30,6 +30,7 @@ Plugin 'leafgarland/typescript-vim'
 
 " Display
 Plugin 'morhetz/gruvbox'
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
