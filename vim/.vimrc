@@ -115,7 +115,7 @@ nmap <Leader>f :tag<space>
 "---------------------
 
 " ----- ctrlpvim/ctrlp.vim settings -----
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,result:30'
 
 " ----- scrooloose/nerdtree settings -----
