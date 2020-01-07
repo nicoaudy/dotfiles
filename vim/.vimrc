@@ -232,7 +232,7 @@ let g:airline#extensions#ale#enabled = 1
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
-set tags=~/.vimtags
+set tags=~/.vimtags,tags;
 " Sensible defaults
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1

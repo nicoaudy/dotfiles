@@ -1,0 +1,13 @@
+-R
+--exclude=.svn
+--exclude=.git
+--exclude=node_modules
+--exclude="*.js"
+--tag-relative=yes
+--regex-PHP=/abstract\s+class\s+([^ ]+)/\1/c/
+--regex-PHP=/interface\s+([^ ]+)/\1/c/
+--regex-PHP=/(public\s+|static\s+|protected\s+|private\s+)\$([^ \t=]+)/\2/p/
+--regex-PHP=/const\s+([^ \t=]+)/\1/d/
+--regex-PHP=/final\s+(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/
+--PHP-kinds=+cpdf
+--languages=php
