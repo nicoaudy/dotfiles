@@ -12,6 +12,7 @@ ln -sfv "$DOTFILES_DIR/oh-my-zsh/themes/taybalt.zsh-theme" ~/.oh-my-zsh/themes
 
 # PHP Related
 ln -sfv "$DOTFILES_DIR/dots/.phpcsfixer" ~
+ln -sfv "$DOTFILES_DIR/dots/.phpcs.xml" ~/phpcs.xml
 
 # Add global gitignore
 git config --global core.excludesfile ~/.gitignore_global
