@@ -5,7 +5,7 @@ so ~/.vim/plugins.vim
 syntax enable
 
 " VIM CONFIG.
-
+"
 set encoding=utf-8
 set backspace=indent,eol,start
 let mapleader=','
@@ -25,7 +25,7 @@ set binary
 set noeol
 set hlsearch
 set incsearch
-set wildignore+=*/vendor/**
+set wildignore+="*/vendor/**"
 set nostartofline
 set showmode
 set title
@@ -53,10 +53,12 @@ set splitright
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-set background=dark
-colorscheme PaperColor
-let g:impact_transbg=1
+" set background=dark
+colorscheme snazzy
+" let g:impact_transbg=1
 set linespace=15
+hi Normal guibg=NONE ctermbg=NONE
+
 " Use 256 colors. This is the useful for terminal vim.
 set t_CO=256
 
@@ -246,6 +248,9 @@ let g:easytags_suppress_ctags_warning = 1
 hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
+
+" ----- connorholyday/vim-snazzy settings -----
+let g:SnazzyTransparent = 1
 
 "---------------------
 "
