@@ -81,9 +81,9 @@ module.exports = {
     activeTab: '🔥🔥🔥',
     hyperline: {
         plugins: [
-          "battery",
-          "memory",
+          "network",
           "spotify",
+          "battery",
         ]
     },
 
