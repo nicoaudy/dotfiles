@@ -53,12 +53,13 @@ set splitright
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-" set background=light
+set background=dark
 colorscheme PaperColor
 let g:impact_transbg=1
 set linespace=15
 " Use 256 colors. This is the useful for terminal vim.
-" set t_CO=256
+set t_CO=256
+
 " Gui option
 hi LineNr guibg=bg
 set guifont=Operator\ Mono\ Book\ Italic:h13
@@ -245,21 +246,6 @@ let g:easytags_suppress_ctags_warning = 1
 hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
-
-
-" ----- NLKNguyen/papercolor-theme settings -----
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default.dark': {
-  \       'transparent_background': 1,
-  \       'override' : {
-  \         'color00' : ['#080808', '232'],
-  \         'linenumber_bg' : ['#080808', '232']
-  \       }
-  \     }
-  \   }
-  \ }
-
 
 "---------------------
 "

@@ -33,7 +33,7 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: '#000',
+    // backgroundColor: '#000',
 
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
@@ -48,7 +48,7 @@ module.exports = {
     lineHeight: 2,
 
     // letter spacing as a relative unit
-    letterSpacing: 0,
+    letterSpacing: 1.5,
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -73,7 +73,7 @@ module.exports = {
     },
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '12px 14px',
+    padding: '0px 20px 10px 20px',
 
     windowSize: [1600, 900],
 
@@ -95,10 +95,10 @@ module.exports = {
     'hyperlinks',
     'hypercwd',
     "hyper-font-ligatures",
-    "hyper-one-dark",
     "hyper-search",
     "hyper-active-tab",
-    "hyperline"
+    "hyperline",
+    "hyper-snazzy"
   ],
   localPlugins: [
   ]
