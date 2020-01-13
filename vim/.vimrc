@@ -271,6 +271,7 @@ autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
 
 
 " set filetypes as typescript.tsx

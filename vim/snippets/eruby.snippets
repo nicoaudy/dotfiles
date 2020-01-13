@@ -5,3 +5,15 @@ snippet e "Ruby tag for echo"
 
 snippet e= "Ruby tag echo with ="
 	<%= $1 %>
+
+snippet if= "Erb if"
+	<%= if $1 %>
+	    $2
+	<% end %>
+
+snippet ife= "Erb if else"
+	<%= if $1 %>
+	    $2
+	<% else %>
+	    $3
+	<% end %>
