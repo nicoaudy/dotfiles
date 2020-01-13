@@ -57,6 +57,9 @@ brew install dnsmasq
 brew install mariadb
 brew install nginx
 brew install redis
+
+brew install starship
+
 # Wait a bit before moving on...
 sleep 1
 

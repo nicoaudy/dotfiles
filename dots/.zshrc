@@ -75,6 +75,25 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Load Completion
+source /Users/nicoaudy/dotfiles/zsh/completion.zsh
+source /Users/nicoaudy/dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Initialize the completion system
+autoload -Uz compinit
+
+# Cache completion if nothing changed - faster startup time
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit -i
+else
+  compinit -C -i
+fi
+
+# Enhanced form of menu completion called `menu selection'
+zmodload -i zsh/complist
+
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -99,6 +118,7 @@ export LC_ALL=en_US.UTF-8
 # Example aliases
 source /Users/nicoaudy/.bash_profile
 eval $(thefuck --alias)
+eval "$(starship init zsh)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -108,3 +128,4 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:/Users/nicoaudy/flutter/bin
 export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
+alias ls='ls -G'
