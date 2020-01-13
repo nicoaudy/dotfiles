@@ -98,8 +98,11 @@ module.exports = {
     "hyper-search",
     "hyper-active-tab",
     "hyperline",
-    "hyper-snazzy"
+    "hyper-snazzy",
   ],
   localPlugins: [
-  ]
+  ],
+  keymaps: {
+    'window:toggleFullScreen': 'cmd+enter'
+  },
 };
