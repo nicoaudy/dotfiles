@@ -5,10 +5,11 @@ module.exports = {
     updateChannel: 'canary',
 
     // default font size in pixels for all tabs
-    fontSize: 13.5,
+    fontSize: 12.5,
 
     // font family with optional fallbacks
-    fontFamily: '"Dank Mono", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily:
+      '"Dank Mono", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -69,7 +70,7 @@ module.exports = {
       lightBlue: '#C3BCB2',
       lightMagenta: '#CBC5BA',
       lightCyan: '#E3DDD2',
-      lightWhite: '#EFE8DC'
+      lightWhite: '#EFE8DC',
     },
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
@@ -80,13 +81,8 @@ module.exports = {
     webGLRenderer: false,
     activeTab: '🔥🔥🔥',
     hyperline: {
-        plugins: [
-          "network",
-          "spotify",
-          "battery",
-        ]
+      plugins: ['network', 'spotify', 'battery'],
     },
-
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
     shellArgs: ['--login'],
@@ -94,15 +90,14 @@ module.exports = {
   plugins: [
     'hyperlinks',
     'hypercwd',
-    "hyper-font-ligatures",
-    "hyper-search",
-    "hyper-active-tab",
-    "hyperline",
-    "hyper-snazzy",
+    'hyper-font-ligatures',
+    'hyper-search',
+    'hyper-active-tab',
+    'hyperline',
+    'hyper-snazzy',
   ],
-  localPlugins: [
-  ],
+  localPlugins: [],
   keymaps: {
-    'window:toggleFullScreen': 'cmd+enter'
+    'window:toggleFullScreen': 'cmd+enter',
   },
 };
