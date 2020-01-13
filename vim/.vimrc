@@ -148,7 +148,7 @@ vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
 
 " ----- mattn/emmet-vim settings -----
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,php EmmetInstall
+autocmd FileType html,css,php,javascript,jsx,eruby EmmetInstall
 let g:user_emmet_leader_key='<Leader>z'
 
 " ----- Valloric/MatchTagAlways settings -----
@@ -270,6 +270,8 @@ autocmd FileType vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType html setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
@@ -286,4 +288,3 @@ let g:user_emmet_settings={
 \    },
 \  },
 \}
-autocmd FileType html,css,javascript,jsx EmmetInstall
