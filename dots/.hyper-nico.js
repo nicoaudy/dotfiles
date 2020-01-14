@@ -46,10 +46,10 @@ module.exports = {
     termCSS: '',
 
     // line height as a relative unit
-    lineHeight: 2,
+    lineHeight: 1.5,
 
     // letter spacing as a relative unit
-    letterSpacing: 1.5,
+    letterSpacing: 1,
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
