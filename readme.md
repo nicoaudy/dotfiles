@@ -1,5 +1,5 @@
-# Dotfiles
-Dotfiles I use with MacOS Sierra mostly for Web Development.
+# ⚡️.dotfiles | batteries included dotfile configurations
+This repository contains my public dotfiles. It comes with a single installer that will take care of installing.
 
 ## Install
 
@@ -56,14 +56,6 @@ Clone and install dotfiles:
        remove           Remove host from SSH config
        list-host        List of all hosts in SSH config
 
-## VIM
-
-```bash
-cd scripts
-chmod +x vim-install.sh
-chmod +x vim-save.sh
-./install
-```
 
 ## Credits
 
