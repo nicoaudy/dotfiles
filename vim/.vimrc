@@ -103,7 +103,10 @@ noremap <Leader>P "+p
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-"Open vimrc easily.
+" Switch window
+noremap <Leader>w <C-w>w
+
+""Open vimrc easily.
 nmap <Leader>ev :tabe $MYVIMRC<cr>
 nmap <Leader>es :e ~/.vim/snippets/
 nmap <Leader>ep :tabe ~/.vim/plugins.vim<cr>
