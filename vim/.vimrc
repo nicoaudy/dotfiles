@@ -91,8 +91,8 @@ vmap v <Esc>
 " Better save file
 nnoremap ;; :w<cr>
 inoremap ;; <C-c>:w<cr>
-nnoremap <Leader>q :q<cr>
-inoremap <Leader>q <C-c>:q<cr>
+nnoremap <Leader>q :q!<cr>
+inoremap <Leader>q <C-c>:q!<cr>
 
 " Yank to clipboard
 noremap <Leader>y "*y

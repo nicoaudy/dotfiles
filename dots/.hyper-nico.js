@@ -24,10 +24,10 @@ module.exports = {
     cursorAccentColor: '#000',
 
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-    cursorShape: 'BEAM',
+    cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -44,6 +44,7 @@ module.exports = {
 
     // custom CSS to embed in the main window
     termCSS: '',
+    css: `.splitpane_divider { background-color: palevioletred !important; }`,
 
     // line height as a relative unit
     lineHeight: 1.5,
@@ -95,6 +96,8 @@ module.exports = {
     'hyper-active-tab',
     'hyperline',
     'hyper-snazzy',
+    "hyperterm-paste",
+    "hyper-blink"
   ],
   localPlugins: [],
   keymaps: {
