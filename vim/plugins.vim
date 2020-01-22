@@ -10,7 +10,9 @@ Plugin 'tpope/vim-vinegar'				"Use - for see current file folder, shift 5 for cr
 Plugin 'tpope/vim-surround'				"Change surround (cs from to) and delete surround (ds from to), cst for tag
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plugin 'junegunn/fzf.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'aaren/arrowkeyrepurpose'
 Plugin 'matze/vim-move'

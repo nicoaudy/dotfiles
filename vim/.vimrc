@@ -123,8 +123,13 @@ nmap <Leader>f :tag<space>
 "---------------------
 
 " ----- ctrlpvim/ctrlp.vim settings -----
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|ico|git|svn))$'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,result:30'
+" let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|ico|git|svn))$'
+" let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,result:30'
+
+" ----- fzf/fzf.vim settings -----
+map <leader>f :Files<CR>
+map <C-P> :GFiles<CR>
+map <C-B> :Buffer<CR>
 
 " ----- scrooloose/nerdtree settings -----
 let NERDTreeHijackNetw = 0
