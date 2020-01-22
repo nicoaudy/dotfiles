@@ -53,11 +53,11 @@ set splitright
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-" set background=dark
-colorscheme snazzy
+set background=dark
+colorscheme gruvbox
 " let g:impact_transbg=1
 set linespace=15
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 " Use 256 colors. This is the useful for terminal vim.
 set t_CO=256
@@ -238,10 +238,12 @@ augroup mySyntastic
 augroup END
 
 " ----- vim-airline/vim-airline settings -----
-let g:airline_theme='papercolor'
+let g:airline_theme='random'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
-let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#enabled=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#buffer_nr_show=1
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
