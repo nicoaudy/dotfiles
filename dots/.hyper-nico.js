@@ -95,7 +95,7 @@ module.exports = {
     'hyper-search',
     'hyper-active-tab',
     'hyperline',
-    'hyper-snazzy',
+    'hyperterm-palenight',
     "hyperterm-paste",
     "hyper-blink"
   ],

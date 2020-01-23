@@ -53,10 +53,15 @@ set splitright
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-set background=dark
-colorscheme gruvbox
-" let g:impact_transbg=1
+" set background=dark
+colorscheme material
 set linespace=15
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+" let g:impact_transbg=1
 " hi Normal guibg=NONE ctermbg=NONE
 
 " Use 256 colors. This is the useful for terminal vim.
@@ -121,6 +126,10 @@ nmap <Leader>f :tag<space>
 " PLUGINS CONFIG
 "
 "---------------------
+
+" ----- kaicataldo/material.vim settings -----
+let g:material_theme_style = 'palenight'
+let g:material_terminal_italics = 1
 
 " ----- ctrlpvim/ctrlp.vim settings -----
 " let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|ico|git|svn))$'
@@ -238,7 +247,8 @@ augroup mySyntastic
 augroup END
 
 " ----- vim-airline/vim-airline settings -----
-let g:airline_theme='random'
+" base16_isotope
+let g:airline_theme='base16_isotope'
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#ale#enabled=1
@@ -260,9 +270,6 @@ let g:easytags_suppress_ctags_warning = 1
 hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
-
-" ----- connorholyday/vim-snazzy settings -----
-let g:SnazzyTransparent = 1
 
 "---------------------
 "
