@@ -34,8 +34,10 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'kaicataldo/material.vim'
 Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
+Plugin 'mengelbrecht/lightline-bufferline'
 
 " Code Tools
 Plugin 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'html', 'css'] }

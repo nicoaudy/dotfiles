@@ -246,18 +246,79 @@ augroup mySyntastic
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
 
-" ----- vim-airline/vim-airline settings -----
+" ----- vim-airline/vim-airline settings  REMOVED Replace with lightline-----
 " base16_isotope
-let g:airline_theme='base16_isotope'
-let g:airline#extensions#hunks#enabled=0
-let g:airline#extensions#branch#enabled=1
-let g:airline#extensions#ale#enabled=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_nr_show=1
+" let g:airline_theme='base16_isotope'
+" let g:airline#extensions#hunks#enabled=0
+" let g:airline#extensions#branch#enabled=1
+" let g:airline#extensions#ale#enabled=1
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline#extensions#tabline#buffer_nr_show=1
+" let g:airline#extensions#hunks#non_zero_only = 1
+
+" ----- itchyny/lightline settings -----
+let g:lightline = {
+\   'colorscheme': 'one',
+\   'active': {
+\     'left':[[ 'mode', 'paste' ],
+\             [ 'fugitive', 'readonly', 'filename', 'modified' ]]
+\   },
+\   'component': {
+\     'lineinfo': ' %3l:%-2v',
+\   },
+\   'component_function': {
+\     'fugitive': 'LightlineFugitive',
+\     'readonly': 'LightlineReadonly',
+\     'modified': 'LightlineModified',
+\   }
+\}
+let g:lightline.separator = {
+\   'left': '', 'right': ''
+\}
+let g:lightline.subseparator = {
+\   'left': '', 'right': ''
+\}
+let g:lightline.tabline = {
+\   'left': [['buffers']],
+\   'right': [['string1'], ['string2']]
+\}
+let g:lightline.component_expand = {
+\   'buffers': 'lightline#bufferline#buffers'
+\}
+let g:lightline.component_type = {
+\   'buffers': 'tabsel'
+\}
+let g:lightline#bufferline#unnamed = "[NO NAME]"
+let g:lightline#bufferline#filename_modifier= ":."
+let g:lightline#bufferline#more_buffers = "..."
+let g:lightline#bufferline#modified = " +"
+let g:lightline#bufferline#read_only = " -"
+let g:lightline#bufferline#shorten_path = 1
+let g:lightline#bufferline#show_number = 0
+
+function! LightlineModified()
+    return &modified ? '●' : ''
+endfunction
+
+function! LightlineReadonly()
+    return &readonly ? '' : ''
+endfunction
+
+function! LightlineFugitive()
+    if exists('*fugitive#head')
+        let branch = fugitive#head()
+        return branch !=# '' ? ' '.branch : ''
+    endif
+    return ''
+endfunction
+
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
 set tags=~/.vimtags,tags;
+
 " Sensible defaults
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
@@ -269,7 +330,6 @@ let g:easytags_suppress_ctags_warning = 1
 " Required after having changed the colorscheme
 hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
-let g:airline#extensions#hunks#non_zero_only = 1
 
 "---------------------
 "
@@ -296,6 +356,9 @@ autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
+" Lightline
+autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
+
 let g:jsx_ext_required = 1
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<leader>z'
@@ -310,5 +373,5 @@ let g:user_emmet_settings={
 \}
 
 " Make capslock to escape
-au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+" au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
