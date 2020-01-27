@@ -10,14 +10,17 @@ alias ci="composer install"
 alias cdo="composer dump-autoload -o"
 
 # Artisan
-alias a="php artisan"
+alias pa="php artisan"
 alias mfs='php artisan migrate:fresh --seed'
 alias clean='a cache:clear && artisan view:clear && artisan clear-compiled && artisan route:clear && artisan config:clear && artisan config:cache && artisan route:cache'
 
 # Git
+alias a="git add ."
+alias c="git commit -m"
+alias s="git status"
+alias p="git push origin"
 alias nah="git stash && git reset --hard && git clean -df"
 alias gc="git checkout"
-alias gpo="git push origin"
 alias gm="git merge"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 

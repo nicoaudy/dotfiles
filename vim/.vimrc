@@ -147,10 +147,6 @@ nmap <Leader>f :tag<space>
 let g:material_theme_style = 'palenight'
 let g:material_terminal_italics = 1
 
-" ----- ctrlpvim/ctrlp.vim settings -----
-" let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|ico|git|svn))$'
-" let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,result:30'
-
 " ----- fzf/fzf.vim settings -----
 map <leader>f :Files<CR>
 map <C-P> :GFiles<CR>
@@ -264,6 +260,17 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Run NeoMake on read and write operations
+autocmd! BufReadPost,BufWritePost * Neomake
+
+" Disable inherited syntastic
+let g:syntastic_mode_map = {
+  \ "mode": "passive",
+  \ "active_filetypes": [],
+  \ "passive_filetypes": [] }
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
+
 augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
@@ -352,7 +359,7 @@ let g:easytags_suppress_ctags_warning = 1
 " ----- airblade/vim-gitgutter settings -----
 " Required after having changed the colorscheme
 hi clear SignColumn
-" In vim-airline, only display "hunks" if the diff is non-zero
+" In vim-airline, only display hunks if the diff is non-zero
 
 "---------------------
 "

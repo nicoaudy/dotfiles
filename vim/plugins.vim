@@ -34,7 +34,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
 " Code Tools
-Plug 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'html', 'css'] }
+Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier'
@@ -75,6 +75,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Vim etc
 Plug 'moll/vim-bbye'
+
+" Neovim Spesific
+Plug 'neomake/neomake'
 
 call plug#end()            " required
 filetype plugin indent on    " required

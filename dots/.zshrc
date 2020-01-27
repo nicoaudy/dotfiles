@@ -129,3 +129,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:/Users/nicoaudy/flutter/bin
 export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
 alias ls='ls -G'
+
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
