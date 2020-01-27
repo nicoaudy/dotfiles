@@ -58,7 +58,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias scrape="scrapeUrl"
 
 # Move
-alias c='clear'
+alias cl='clear'
 alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../../'
