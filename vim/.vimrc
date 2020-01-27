@@ -146,6 +146,13 @@ let NERDTreeShowHidden=1
 nmap <Leader>` :NERDTreeToggle<cr>
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
+" close the nerdtree when file is open
+let NERDTreeQuitOnOpen = 1
+
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
 " ----- arnaud-lb/vim-php-namespace settings -----
 function! IPhpInsertUse()
     call PhpInsertUse()
