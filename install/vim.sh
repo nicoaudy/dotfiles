@@ -9,7 +9,8 @@ ln -sfv "$DOTFILES_DIR/vim/plugins.vim" $HOME/.vim/plugins.vim
 ln -sfv "$DOTFILES_DIR/vim/snippets" $HOME/.vim/
 
 # Get Vundle plugin
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install Plugins
-vim +PluginInstall +qall
+vim +PlugInstall +qall

@@ -1,72 +1,78 @@
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Garam  kehidupan
-Plugin 'tpope/vim-vinegar'				"Use - for see current file folder, shift 5 for create file, d new directory, D for delete.
-Plugin 'tpope/vim-surround'				"Change surround (cs from to) and delete surround (ds from to), cst for tag
-Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'aaren/arrowkeyrepurpose'
-Plugin 'matze/vim-move'
-Plugin 'ervandew/supertab'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-vinegar'				"Use - for see current file folder, shift 5 for create file, d new directory, D for delete.
+Plug 'tpope/vim-surround'				"Change surround (cs from to) and delete surround (ds from to), cst for tag
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'aaren/arrowkeyrepurpose'
+Plug 'matze/vim-move'
+Plug 'ervandew/supertab'
+Plug 'terryma/vim-multiple-cursors'
 
 " PHP Related
-Plugin 'StanAngeloff/php.vim'
-Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'stephpy/vim-php-cs-fixer'
+Plug 'StanAngeloff/php.vim'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'stephpy/vim-php-cs-fixer'
 
 " JS Related
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'peitalin/vim-jsx-typescript'
-Plugin 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim'
 
 " Display
-Plugin 'morhetz/gruvbox'
-Plugin 'kaicataldo/material.vim'
-Plugin 'NLKNguyen/papercolor-theme'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-Plugin 'itchyny/lightline.vim'
-Plugin 'mengelbrecht/lightline-bufferline'
+Plug 'morhetz/gruvbox'
+Plug 'kaicataldo/material.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " Code Tools
-Plugin 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'html', 'css'] }
-Plugin 'Yggdroot/indentLine'
-Plugin 'SirVer/ultisnips'
-Plugin 'prettier/vim-prettier'
-Plugin 'ap/vim-css-color'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'garbas/vim-snipmate'
-Plugin 'Valloric/YouCompleteMe'
+Plug 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'html', 'css'] }
+Plug 'Yggdroot/indentLine'
+Plug 'SirVer/ultisnips'
+Plug 'prettier/vim-prettier'
+Plug 'ap/vim-css-color'
+Plug 'sheerun/vim-polyglot'
+Plug 'garbas/vim-snipmate'
+
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.sh
+  endif
+endfunction
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 " Pairs
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'Valloric/MatchTagAlways'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Valloric/MatchTagAlways'
 
 " Tags
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 
 " Syntax Checking
-Plugin 'w0rp/ale'
-Plugin 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
+
+function! Installjshint(info)
+  if a:info.status == 'installed' || a:info.force
+    !npm install -g jshint
+  endif
+endfunction
+Plug 'scrooloose/syntastic', { 'do': function('Installjshint') }
 
 " Git
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " Vim etc
-Plugin 'moll/vim-bbye'
+Plug 'moll/vim-bbye'
 
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
