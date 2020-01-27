@@ -14,6 +14,7 @@ brew upgrade
 brew tap caskroom/cask
 brew install brew-cask
 brew tap caskroom/versions
+brew tap neovim/homebrew-neovim
 
 # ------------------------------------------------------------------------------
 # Command line interface from brew
@@ -38,6 +39,7 @@ brew install wifi-password
 brew install sqlite
 brew install potrace
 brew install ctags
+brew install --HEAD neovim
 
 # Binaries
 brew install tree
