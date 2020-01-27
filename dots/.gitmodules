@@ -1,0 +1,4 @@
+[submodule ".vim/plugged/YouCompleteMe"]
+	path = .vim/plugged/YouCompleteMe
+ 	url = https://github.com/Valloric/YouCompleteMe
+ 	ignore = dirty
