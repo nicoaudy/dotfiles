@@ -70,6 +70,8 @@ Plug 'scrooloose/syntastic', { 'do': function('Installjshint') }
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 
 " Vim etc
 Plug 'moll/vim-bbye'
