@@ -12,7 +12,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'aaren/arrowkeyrepurpose'
 Plug 'matze/vim-move'
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 
 " PHP Related
