@@ -70,7 +70,7 @@ map Q  <C-W>q
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
 " set background=dark
-colorscheme hybrid
+colorscheme material
 set linespace=15
 
 if (has('termguicolors'))
@@ -143,6 +143,9 @@ nmap <Leader>f :tag<space>
 "
 "---------------------
 
+" ----- kaicataldo/material.vim settings -----
+let g:material_theme_style = 'palenight'
+
 " ----- fzf/fzf.vim settings -----
 map <leader>f :Files<CR>
 map <C-P> :GFiles<CR>
@@ -201,7 +204,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " ----- prettier/vim-prettier settings -----
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " ----- moll/vim-bbye settings -----
 :nnoremap <Leader><Leader>q :Bdelete<CR>
@@ -253,6 +256,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eshint', 'jsxhint', 'jshint']
 
 " Run NeoMake on read and write operations
 autocmd! BufReadPost,BufWritePost * Neomake
@@ -272,7 +276,7 @@ augroup END
 
 " ----- itchyny/lightline settings -----
 let g:lightline = {
-\   'colorscheme': 'one',
+\   'colorscheme': 'material_vim',
 \   'active': {
 \     'left':[[ 'mode', 'paste' ],
 \             [ 'fugitive', 'readonly', 'filename', 'modified' ]]
@@ -347,6 +351,15 @@ hi clear SignColumn
 
 
 " ----- neoclide/coc settings -----
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+
 let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver']
 
 "---------------------

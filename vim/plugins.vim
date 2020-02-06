@@ -22,6 +22,7 @@ Plug 'leafgarland/typescript-vim'
 
 " Display
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'kaicataldo/material.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
@@ -29,7 +30,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'SirVer/ultisnips'
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
 Plug 'marcweber/vim-addon-mw-utils'
