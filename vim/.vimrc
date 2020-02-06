@@ -198,8 +198,6 @@ let g:mta_filetypes = {
     \}
 
 " ----- SirVer/ultisnips settings -----
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
@@ -361,6 +359,10 @@ let g:easytags_suppress_ctags_warning = 1
 hi clear SignColumn
 " In vim-airline, only display hunks if the diff is non-zero
 
+
+" ----- neoclide/coc settings -----
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-git']
+
 "---------------------
 "
 " AUTOCOMMAND
@@ -401,6 +403,17 @@ let g:user_emmet_settings={
 \    },
 \  },
 \}
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " Make capslock to escape
 " au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

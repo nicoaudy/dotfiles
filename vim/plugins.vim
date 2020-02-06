@@ -42,12 +42,14 @@ Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
 Plug 'garbas/vim-snipmate'
 
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.sh
-  endif
-endfunction
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
+" function! BuildYCM(info)
+"   if a:info.status == 'installed' || a:info.force
+"     !./install.sh
+"   endif
+" endfunction
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 " Pairs
 Plug 'jiangmiao/auto-pairs'
