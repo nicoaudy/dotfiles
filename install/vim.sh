@@ -6,6 +6,7 @@ mkdir -p $HOME/.vim/
 
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" $HOME/.vimrc
 ln -sfv "$DOTFILES_DIR/vim/plugins.vim" $HOME/.vim/plugins.vim
+ln -sfv "$DOTFILES_DIR/vim/coc-settings.json" $HOME/.vim/coc-settings.json
 ln -sfv "$DOTFILES_DIR/vim/snippets" $HOME/.vim/
 
 # For neovim spesific
