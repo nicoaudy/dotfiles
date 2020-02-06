@@ -1,4 +1,8 @@
 {
+	"emmet.includeLanguages": {
+		"vue-html": "html",
+		"javascript": "javascriptreact"
+	},
 	"prettier.tslintIntegration": true,
 	"prettier.eslintIntegration": false,
 	"coc.preferences.formatOnSaveFiletypes": [

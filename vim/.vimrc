@@ -70,7 +70,7 @@ map Q  <C-W>q
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
 " set background=dark
-colorscheme material
+colorscheme hybrid
 set linespace=15
 
 if (has('termguicolors'))
@@ -85,7 +85,7 @@ set t_CO=256
 
 " Gui option
 hi LineNr guibg=bg
-set guifont=Operator\ Mono\ Book\ Italic:h13
+set guifont=Dank\ Mono:h13
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
@@ -142,10 +142,6 @@ nmap <Leader>f :tag<space>
 " PLUGINS CONFIG
 "
 "---------------------
-
-" ----- kaicataldo/material.vim settings -----
-let g:material_theme_style = 'palenight'
-let g:material_terminal_italics = 1
 
 " ----- fzf/fzf.vim settings -----
 map <leader>f :Files<CR>
@@ -273,16 +269,6 @@ augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
-
-" ----- vim-airline/vim-airline settings  REMOVED Replace with lightline-----
-" base16_isotope
-" let g:airline_theme='base16_isotope'
-" let g:airline#extensions#hunks#enabled=0
-" let g:airline#extensions#branch#enabled=1
-" let g:airline#extensions#ale#enabled=1
-" let g:airline#extensions#tabline#enabled=1
-" let g:airline#extensions#tabline#buffer_nr_show=1
-" let g:airline#extensions#hunks#non_zero_only = 1
 
 " ----- itchyny/lightline settings -----
 let g:lightline = {
@@ -414,7 +400,3 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" Make capslock to escape
-" au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-" au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
