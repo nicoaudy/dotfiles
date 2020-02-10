@@ -3,7 +3,8 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 " Garam  kehidupan
-Plug 'tpope/vim-surround'				"Change surround (cs from to) and delete surround (ds from to), cst for tag
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
@@ -33,7 +34,6 @@ Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
-Plug 'marcweber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
