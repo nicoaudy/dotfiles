@@ -158,7 +158,7 @@ nmap <Leader>` :NERDTreeToggle<cr>
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
 " close the nerdtree when file is open
-let NERDTreeQuitOnOpen = 1
+" let NERDTreeQuitOnOpen = 1
 
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
