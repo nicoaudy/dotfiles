@@ -15,7 +15,6 @@ Plug 'terryma/vim-multiple-cursors'
 
 " PHP Related
 Plug 'StanAngeloff/php.vim'
-Plug 'arnaud-lb/vim-php-namespace'
 Plug 'stephpy/vim-php-cs-fixer'
 
 " JS Related

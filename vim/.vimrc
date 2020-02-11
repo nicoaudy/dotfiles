@@ -164,28 +164,12 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-" ----- arnaud-lb/vim-php-namespace settings -----
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
-
-function! IPhpExpandClass()
-    call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
-let g:php_namespace_sort_after_insert = 1
-
 "https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
 vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
 
 " ----- mattn/emmet-vim settings -----
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,php,javascript,jsx,eruby EmmetInstall
+autocmd FileType html,css,php,javascript,jsx,typescript,tsx,eruby EmmetInstall
 let g:user_emmet_leader_key='<Leader>z'
 
 " ----- Valloric/MatchTagAlways settings -----
