@@ -30,7 +30,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'SirVer/ultisnips'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html' 'svelte'] }
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
 Plug 'garbas/vim-snipmate'

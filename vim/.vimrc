@@ -128,7 +128,7 @@ nnoremap <leader><leader> <c-^>
 noremap <Leader>w <C-w>w
 
 ""Open vimrc easily.
-nmap <Leader>ev :tabe $MYVIMRC<cr>
+nmap <Leader>ev :tabe ~/.vimrc<cr>
 nmap <Leader>es :e ~/.vim/snippets/
 nmap <Leader>ep :tabe ~/.vim/plugins.vim<cr>
 
@@ -159,7 +159,6 @@ nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
 " close the nerdtree when file is open
 " let NERDTreeQuitOnOpen = 1
-
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -213,11 +212,13 @@ let g:ale_fixers = {
   \ '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
   \ 'javascript': ['eslint'],
+  \ 'svelte': ['eslint', 'prettier', 'prettier_standard'],
   \}
 let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \   'php': ['php'],
+\   'svelte': ['styleling', 'eslint'],
 \}
 
 command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
@@ -240,7 +241,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eshint', 'jsxhint', 'jshint']
+" let g:syntastic_javascript_checkers = ['eshint', 'jsxhint', 'jshint']
+let g:syntastic_javascript_checkers = ['eshint']
 
 " Run NeoMake on read and write operations
 autocmd! BufReadPost,BufWritePost * Neomake
@@ -344,7 +346,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets']
+
+let g:coc_snippet_next = '<tab>'
 
 "---------------------
 "
