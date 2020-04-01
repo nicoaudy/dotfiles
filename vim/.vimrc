@@ -69,7 +69,7 @@ map Q  <C-W>q
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-set background=light
+set background=dark
 colorscheme dracula
 set linespace=15
 
