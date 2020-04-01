@@ -270,7 +270,7 @@ let g:lightline = {
 \       [ 'fugitive', 'readonly', 'filename', 'modified' ]
 \     ],
 \     'right': [
-\       [ 'clock' ]
+\       [ 'clock', 'filetype' ]
 \     ]
 \   },
 \   'component': {
@@ -280,7 +280,8 @@ let g:lightline = {
 \     'fugitive': 'LightlineFugitive',
 \     'readonly': 'LightlineReadonly',
 \     'modified': 'LightlineModified',
-\     'clock': 'LightlineClock'
+\     'clock': 'LightlineClock',
+\     'filetype': 'MyFiletype',
 \   }
 \}
 let g:lightline.separator = {
@@ -307,9 +308,13 @@ let g:lightline#bufferline#read_only = " -"
 let g:lightline#bufferline#shorten_path = 1
 let g:lightline#bufferline#show_number = 0
 
-let g:StatuslineUpdateTimer#clockformat = '(%a), %m/%d %H:%M'
+let g:StatuslineUpdateTimer#clockformat = '🕰️  %a, %m/%d %H:%M'
 function! LightlineClock()
     return g:StatuslineUpdateTimer#clock()
+endfunction
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
 
 function! LightlineModified()
