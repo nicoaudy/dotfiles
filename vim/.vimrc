@@ -69,8 +69,8 @@ map Q  <C-W>q
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
-" set background=dark
-colorscheme material
+set background=light
+colorscheme dracula
 set linespace=15
 
 if (has('termguicolors'))
@@ -262,7 +262,7 @@ augroup END
 
 " ----- itchyny/lightline settings -----
 let g:lightline = {
-\   'colorscheme': 'material_vim',
+\   'colorscheme': 'jellybeans',
 \   'active': {
 \     'left':[[ 'mode', 'paste' ],
 \             [ 'fugitive', 'readonly', 'filename', 'modified' ]]
@@ -309,7 +309,7 @@ function! LightlineReadonly()
 endfunction
 
 function! LightlineFugitive()
-    if exists('*fugitive#head')
+    if exists('*FugitiveStatusline') || exists('*fugitive#head')
         let branch = fugitive#head()
         return branch !=# '' ? ' '.branch : ''
     endif
