@@ -231,8 +231,9 @@ autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
 " ----- vim-syntastic/syntastic settings -----
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
 
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
@@ -264,8 +265,13 @@ augroup END
 let g:lightline = {
 \   'colorscheme': 'jellybeans',
 \   'active': {
-\     'left':[[ 'mode', 'paste' ],
-\             [ 'fugitive', 'readonly', 'filename', 'modified' ]]
+\     'left': [
+\       [ 'mode', 'paste' ],
+\       [ 'fugitive', 'readonly', 'filename', 'modified' ]
+\     ],
+\     'right': [
+\       [ 'clock' ]
+\     ]
 \   },
 \   'component': {
 \     'lineinfo': ' %3l:%-2v',
@@ -274,6 +280,7 @@ let g:lightline = {
 \     'fugitive': 'LightlineFugitive',
 \     'readonly': 'LightlineReadonly',
 \     'modified': 'LightlineModified',
+\     'clock': 'LightlineClock'
 \   }
 \}
 let g:lightline.separator = {
@@ -299,6 +306,11 @@ let g:lightline#bufferline#modified = " +"
 let g:lightline#bufferline#read_only = " -"
 let g:lightline#bufferline#shorten_path = 1
 let g:lightline#bufferline#show_number = 0
+
+let g:StatuslineUpdateTimer#clockformat = '(%a), %m/%d %H:%M'
+function! LightlineClock()
+    return g:StatuslineUpdateTimer#clock()
+endfunction
 
 function! LightlineModified()
     return &modified ? '●' : ''

@@ -25,6 +25,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'kaicataldo/material.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+Plug 'tsuyoshicho/StatuslineUpdateTimer.vim'
 
 " Code Tools
 Plug 'mattn/emmet-vim'
