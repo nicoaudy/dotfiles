@@ -60,6 +60,12 @@ map vv <C-W>v
 map ss <C-W>s
 map Q  <C-W>q
 
+" Maps Alt-[h,j,k,l] to resizing a window split
+map <silent> <Leader>h <C-w><
+map <silent> <Leader>j <C-W>-
+map <silent> <Leader>k <C-W>+
+map <silent> <Leader>l <C-w>>
+
 "---------------------
 "
 " VISUALS
