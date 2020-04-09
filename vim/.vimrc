@@ -76,7 +76,7 @@ map <silent> <Leader>l <C-w>>
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox
 set background=dark
-colorscheme dracula
+colorscheme desert
 set linespace=15
 
 if (has('termguicolors'))
