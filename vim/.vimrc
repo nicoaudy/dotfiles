@@ -269,7 +269,7 @@ augroup END
 
 " ----- itchyny/lightline settings -----
 let g:lightline = {
-\   'colorscheme': 'jellybeans',
+\   'colorscheme': 'deus',
 \   'active': {
 \     'left': [
 \       [ 'mode', 'paste' ],
