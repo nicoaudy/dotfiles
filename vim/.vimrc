@@ -276,7 +276,7 @@ let g:lightline = {
 \       [ 'fugitive', 'readonly', 'filename', 'modified' ]
 \     ],
 \     'right': [
-\       [ 'clock', 'filetype' ]
+\       [ 'clock', 'battery', 'filetype' ]
 \     ]
 \   },
 \   'component': {
@@ -288,6 +288,7 @@ let g:lightline = {
 \     'modified': 'LightlineModified',
 \     'clock': 'LightlineClock',
 \     'filetype': 'MyFiletype',
+\     'battery': 'battery#component'
 \   }
 \}
 let g:lightline.separator = {
@@ -318,6 +319,8 @@ let g:StatuslineUpdateTimer#clockformat = '🕰️  %a, %m/%d %H:%M'
 function! LightlineClock()
     return g:StatuslineUpdateTimer#clock()
 endfunction
+
+let g:battery#component_format = '%s %v%%'
 
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''

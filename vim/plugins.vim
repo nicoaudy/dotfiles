@@ -27,6 +27,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'tsuyoshicho/StatuslineUpdateTimer.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'lambdalisue/battery.vim'
 
 
 " Code Tools
