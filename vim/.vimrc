@@ -74,9 +74,9 @@ map <silent> <Leader>l <C-w>>
 
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
-" minimalist, bold-contrast, hybrid, gruvbox
+" minimalist, bold-contrast, hybrid, gruvbox, desert
 set background=dark
-colorscheme desert
+colorscheme focuspoint
 set linespace=15
 
 if (has('termguicolors'))
@@ -174,7 +174,7 @@ vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
 
 " ----- mattn/emmet-vim settings -----
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,php,javascript,jsx,typescript,tsx,eruby EmmetInstall
+autocmd FileType html,css,php,javascript,jsx,typescript,tsx,eruby,vue EmmetInstall
 let g:user_emmet_leader_key='<Leader>z'
 
 " ----- Valloric/MatchTagAlways settings -----
