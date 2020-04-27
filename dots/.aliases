@@ -73,3 +73,7 @@ alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && kill
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
 alias -g @="| grep -i"
+
+# Docker
+alias dcrm="docker container rm $(docker container ls -aq)"
+alias dirm="docker image rm $(docker image ls -aq)"

@@ -8,8 +8,10 @@ export ZSH="/Users/nicoaudy/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# Favorite robbyrussell, dstufft
-ZSH_THEME="agnoster"
+# Favorite robbyrussell, dstufft, awesomepanda, edvardm, fwalch,
+# gozilla
+ZSH_THEME="cloud"
+eval "$(starship init zsh)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,7 +120,6 @@ export LC_ALL=en_US.UTF-8
 # Example aliases
 source /Users/nicoaudy/.bash_profile
 eval $(thefuck --alias)
-eval "$(starship init zsh)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

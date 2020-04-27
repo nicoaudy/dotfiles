@@ -320,7 +320,7 @@ function! LightlineClock()
     return g:StatuslineUpdateTimer#clock()
 endfunction
 
-let g:battery#component_format = '%s %v%%'
+let g:battery#component_format = '%s %v%% '
 
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
