@@ -74,9 +74,9 @@ map <silent> <Leader>l <C-w>>
 
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
-" minimalist, bold-contrast, hybrid, gruvbox, desert
+" minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
 set background=dark
-colorscheme focuspoint
+colorscheme crackpot
 set linespace=15
 
 if (has('termguicolors'))
@@ -203,7 +203,7 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_open_list = 1
+let g:ale_open_list = 0  					" Disabled popup👧
 let g:ale_keep_list_window_open=0
 let g:ale_set_quickfix=0
 let g:ale_list_window_size = 5
