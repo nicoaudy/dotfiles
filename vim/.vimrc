@@ -19,7 +19,8 @@ set ignorecase
 set smartcase
 set mouse=a
 set laststatus=2
-set cursorline
+set cursorline!
+set lazyredraw
 set relativenumber
 set binary
 set noeol
@@ -40,6 +41,9 @@ set autowrite
 " Copy paste enabled
 set pastetoggle=<F2>
 set clipboard=unnamed
+
+set timeoutlen=1000
+set ttimeoutlen=0
 
 "---------------------
 "
@@ -75,8 +79,9 @@ map <silent> <Leader>l <C-w>>
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
+" purify, coffee
 set background=dark
-colorscheme crackpot
+colorscheme purify
 set linespace=15
 
 if (has('termguicolors'))
@@ -91,7 +96,7 @@ set t_CO=256
 
 " Gui option
 hi LineNr guibg=bg
-set guifont=Dank\ Mono:h13
+set guifont=Hack\ Nerd\ Font:h12
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
