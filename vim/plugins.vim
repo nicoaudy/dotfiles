@@ -29,7 +29,6 @@ Plug 'tsuyoshicho/StatuslineUpdateTimer.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/battery.vim'
 
-
 " Code Tools
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'

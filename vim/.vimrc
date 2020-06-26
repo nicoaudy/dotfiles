@@ -19,7 +19,7 @@ set ignorecase
 set smartcase
 set mouse=a
 set laststatus=2
-set cursorline!
+set cursorline
 set lazyredraw
 set relativenumber
 set binary
@@ -64,7 +64,7 @@ map vv <C-W>v
 map ss <C-W>s
 map Q  <C-W>q
 
-" Maps Alt-[h,j,k,l] to resizing a window split
+"Maps Alt-[h,j,k,l] to resizing a window split
 map <silent> <Leader>h <C-w><
 map <silent> <Leader>j <C-W>-
 map <silent> <Leader>k <C-W>+
@@ -79,10 +79,14 @@ map <silent> <Leader>l <C-w>>
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
-" purify, coffee
+" purify, coffee, dogrun, flattened_light, hybrid_reverse
 set background=dark
-colorscheme purify
+colorscheme flattened_light
+
 set linespace=15
+set number
+set numberwidth=4
+set showmatch
 
 if (has('termguicolors'))
   set termguicolors
@@ -96,7 +100,7 @@ set t_CO=256
 
 " Gui option
 hi LineNr guibg=bg
-set guifont=Hack\ Nerd\ Font:h12
+set guifont=JetBrainsMono\ Nerd\ Font:h12
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
