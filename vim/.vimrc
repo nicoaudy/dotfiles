@@ -54,14 +54,14 @@ set splitbelow
 set splitright
 
 " Quick jumping between splits
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-H> <C-W>h
-map <C-L> <C-W>l
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
 
 " Open new splits easily
-map vv <C-W>v
-map ss <C-W>s
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
 map Q  <C-W>q
 
 "Maps Alt-[h,j,k,l] to resizing a window split

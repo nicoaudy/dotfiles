@@ -75,5 +75,11 @@ alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
 alias -g @="| grep -i"
 
 # Docker
-alias dcrm="docker container rm $(docker container ls -aq)"
-alias dirm="docker image rm $(docker image ls -aq)"
+if which docker >/dev/null; then
+    alias dcrm="docker container rm $(docker container ls -aq)"
+    alias dirm="docker image rm $(docker image ls -aq)"
+fi
+
+if which tmux >/dev/null; then
+   alias ide="tmux split-window -v -p 30;tmux split-window -h -p 66;tmux split-window -h -p 50"
+fi
