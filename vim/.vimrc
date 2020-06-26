@@ -285,7 +285,7 @@ let g:lightline = {
 \       [ 'fugitive', 'readonly', 'filename', 'modified' ]
 \     ],
 \     'right': [
-\       [ 'clock', 'battery', 'filetype' ]
+\       [ 'battery', 'filetype' ]
 \     ]
 \   },
 \   'component': {
@@ -295,7 +295,6 @@ let g:lightline = {
 \     'fugitive': 'LightlineFugitive',
 \     'readonly': 'LightlineReadonly',
 \     'modified': 'LightlineModified',
-\     'clock': 'LightlineClock',
 \     'filetype': 'MyFiletype',
 \     'battery': 'battery#component'
 \   }
@@ -323,11 +322,6 @@ let g:lightline#bufferline#modified = " +"
 let g:lightline#bufferline#read_only = " -"
 let g:lightline#bufferline#shorten_path = 1
 let g:lightline#bufferline#show_number = 0
-
-let g:StatuslineUpdateTimer#clockformat = '🕰️  %a, %m/%d %H:%M'
-function! LightlineClock()
-    return g:StatuslineUpdateTimer#clock()
-endfunction
 
 let g:battery#component_format = '%s %v%% '
 
