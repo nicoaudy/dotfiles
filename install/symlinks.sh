@@ -10,6 +10,7 @@ ln -sfv "$DOTFILES_DIR/dots/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/dots/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/dots/.gitmodules" ~
 ln -sfv "$DOTFILES_DIR/oh-my-zsh/themes/taybalt.zsh-theme" ~/.oh-my-zsh/themes
+ln -sfv "$DOTFILES_DIR/dots/.tmux.conf" ~
 
 # Hyper
 ln -sfv "$DOTFILES_DIR/dots/.hyper-nico.js" ~/.hyper.js
