@@ -40,6 +40,7 @@ brew install sqlite
 brew install potrace
 brew install ctags
 brew install --HEAD neovim
+brew install tmux
 
 # Binaries
 brew install tree
