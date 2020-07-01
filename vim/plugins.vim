@@ -22,10 +22,8 @@ Plug 'leafgarland/typescript-vim'
 
 " Display
 Plug 'rafi/awesome-vim-colorschemes'
-" Plug 'kaicataldo/material.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-" Plug 'tsuyoshicho/StatuslineUpdateTimer.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/battery.vim'
 
@@ -60,7 +58,6 @@ Plug 'scrooloose/syntastic', { 'do': function('Installjshint') }
 
 " Git
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Vim etc
@@ -68,6 +65,11 @@ Plug 'moll/vim-bbye'
 
 " Neovim Spesific
 Plug 'neomake/neomake'
+
+" Unused
+" Plug 'kaicataldo/material.vim'
+" Plug 'tsuyoshicho/StatuslineUpdateTimer.vim'
+" Plug 'tpope/vim-fugitive'
 
 call plug#end()            " required
 filetype plugin indent on    " required
