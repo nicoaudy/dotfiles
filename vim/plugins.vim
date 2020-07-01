@@ -35,6 +35,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typ
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
 Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 

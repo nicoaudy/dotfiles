@@ -81,7 +81,7 @@ map <silent> <Leader>l <C-w>>
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
 " purify, coffee, dogrun, flattened_light, hybrid_reverse
 set background=dark
-colorscheme flattened_light
+colorscheme deus
 
 set linespace=15
 set number
