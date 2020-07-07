@@ -79,9 +79,10 @@ map <silent> <Leader>l <C-w>>
 " favorite scheme :
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
-" purify, coffee, dogrun, flattened_light, hybrid_reverse
+" purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
+" nuvola, summerfruit256
 set background=dark
-colorscheme dogrun
+colorscheme nuvola
 
 set linespace=15
 set number
@@ -278,7 +279,7 @@ augroup END
 
 " ----- itchyny/lightline settings -----
 let g:lightline = {
-\   'colorscheme': 'deus',
+\   'colorscheme': 'PaperColor',
 \   'active': {
 \     'left': [
 \       [ 'mode', 'paste' ],

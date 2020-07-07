@@ -21,11 +21,15 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'leafgarland/typescript-vim'
 
 " Display
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/battery.vim'
+
+" Colorscheme
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'vim-scripts/nuvola.vim'
+Plug 'vim-scripts/summerfruit256.vim'
 
 " Code Tools
 Plug 'mattn/emmet-vim'
