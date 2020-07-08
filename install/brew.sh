@@ -101,6 +101,7 @@ brew cask install --appdir="/Applications" firefox
 
 # Editors and git management
 brew cask install --appdir="/Applications" visual-studio-code
+brew cask install alacritty
 
 # Development
 brew cask install --appdir="/Applications" java

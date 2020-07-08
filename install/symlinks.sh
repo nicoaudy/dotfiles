@@ -22,5 +22,8 @@ ln -sfv "$DOTFILES_DIR/dots/.phpcs.xml" ~/phpcs.xml
 # ctags
 ln -sfv "$DOTFILES_DIR/dots/.ctags" ~
 
+# Alacritty
+ln -sfv "$DOTFILES_DIR/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
+
 # Add global gitignore
 git config --global core.excludesfile ~/.gitignore_global
