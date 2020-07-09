@@ -17,9 +17,9 @@ window:
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 0
+    lines: 0
 
   # Window position (changes require restart)
   #
@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 6
-    y: 6
+    x: 2
+    y: 4
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -212,7 +212,7 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -325,11 +325,11 @@ colors:
 background_opacity: 1.0
 # background_opacity: 0.95
 
-#selection:
+selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
@@ -348,7 +348,7 @@ background_opacity: 1.0
   #unfocused_hollow: true
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
@@ -407,7 +407,7 @@ background_opacity: 1.0
   # Record all characters and escape sequences as test data.
   #ref_test: false
 
-#mouse:
+mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -417,7 +417,7 @@ background_opacity: 1.0
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
+  hide_when_typing: true
 
   #url:
     # URL launcher
