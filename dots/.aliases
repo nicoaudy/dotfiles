@@ -81,7 +81,12 @@ if which docker >/dev/null; then
 fi
 
 if which tmux >/dev/null; then
-   alias ide="tmux split-window -v -p 30;tmux split-window -h -p 66;tmux split-window -h -p 50"
+   # alias ide="tmux split-window -v -p 30;tmux split-window -h -p 66;tmux split-window -h -p 50"
+   alias ide="tmux split-window -h -p 30;tmux split-window -v -p 50"
+fi
+
+if which composer >/dev/null; then
+   alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 fi
 
 alias vi="vim"

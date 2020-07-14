@@ -65,10 +65,10 @@ nmap sv :vsplit<Return><C-w>w
 map Q  <C-W>q
 
 "Maps Alt-[h,j,k,l] to resizing a window split
-map <silent> <Leader>h <C-w><
-map <silent> <Leader>j <C-W>-
-map <silent> <Leader>k <C-W>+
-map <silent> <Leader>l <C-w>>
+map <silent> sH <C-w><
+map <silent> sJ <C-W>-
+map <silent> sK <C-W>+
+map <silent> sL <C-w>>
 
 "---------------------
 "
@@ -376,7 +376,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets']
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-svelte']
 
 let g:coc_snippet_next = '<tab>'
 
@@ -393,6 +393,7 @@ augroup autosourcing
 augroup END
 
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType svelte setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType typescript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4
