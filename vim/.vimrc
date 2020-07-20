@@ -376,7 +376,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-svelte']
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-svelte', 'coc-go', 'coc-rls']
 
 let g:coc_snippet_next = '<tab>'
 
@@ -393,6 +393,7 @@ augroup autosourcing
 augroup END
 
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType svelte setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType typescript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
