@@ -37,6 +37,7 @@ Clone and install dotfiles:
        node             Run node setup script
        valet            Run valet script
        ohmyzsh          Run oh my zsh script
+       vim              Run vim script
        hosts            Run hosts script
        defaults         Run MacOS defaults script
        dock             Run MacOS dock script
