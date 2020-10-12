@@ -12,7 +12,7 @@ alias cdo="composer dump-autoload -o"
 # Artisan
 alias pa="php artisan"
 alias mfs='php artisan migrate:fresh --seed'
-alias clean='a cache:clear && artisan view:clear && artisan clear-compiled && artisan route:clear && artisan config:clear && artisan config:cache && artisan route:cache'
+alias clean='php artisan cache:clear && php artisan view:clear && php artisan clear-compiled && php artisan route:clear && php artisan config:clear && php artisan config:cache && php artisan route:cache'
 
 # Git
 alias a="git add ."

@@ -80,9 +80,9 @@ map <silent> sL <C-w>>
 " PaperColor, deep-space, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
-" nuvola, summerfruit256
+" nuvola, summerfruit256, github-light
 set background=dark
-colorscheme purify
+colorscheme coffee
 
 set linespace=15
 set number
