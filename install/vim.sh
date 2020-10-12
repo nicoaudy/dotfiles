@@ -13,6 +13,8 @@ ln -sfv "$DOTFILES_DIR/vim/colors" $HOME/.vim/
 # For neovim spesific
 ln -sfv "$DOTFILES_DIR/vim/init.vim" $HOME/.config/nvim/
 
+ln -sfv "$DOTFILES_DIR/vim/init.vim" $HOME/.ideavimrc
+
 # Get Vundle plugin
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
