@@ -41,6 +41,7 @@ brew install potrace
 brew install ctags
 brew install --HEAD neovim
 brew install tmux
+brew install tableplus
 
 # Binaries
 brew install tree
@@ -95,12 +96,12 @@ brew cask install --appdir="/Applications" flux
 brew cask install --appdir="/Applications" dockutil
 
 # Browsers and drives
-# brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" brave-browser
 # brew cask install --appdir="/Applications" google-backup-and-sync
 
 # Editors and git management
 brew cask install --appdir="/Applications" visual-studio-code
-# brew cask install alacritty
+brew cask install alacritty
 
 # Development
 brew cask install --appdir="/Applications" java
