@@ -44,12 +44,11 @@ brew install tmux
 
 # Binaries
 brew install tree
-brew install autojump
 brew install yarn
 
 # PHP
 brew install composer
-brew install php@7.3
+brew install php@7.4
 brew install php-code-sniffer
 brew install pkg-config
 brew install imagemagick
@@ -77,7 +76,7 @@ brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" spotify
-brew cask install --appdir="/Applications" sublime-text
+# brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" filezilla
 brew cask install --appdir="/Applications" postman
@@ -96,12 +95,12 @@ brew cask install --appdir="/Applications" flux
 brew cask install --appdir="/Applications" dockutil
 
 # Browsers and drives
-brew cask install --appdir="/Applications" firefox
+# brew cask install --appdir="/Applications" firefox
 # brew cask install --appdir="/Applications" google-backup-and-sync
 
 # Editors and git management
 brew cask install --appdir="/Applications" visual-studio-code
-brew cask install alacritty
+# brew cask install alacritty
 
 # Development
 brew cask install --appdir="/Applications" java
