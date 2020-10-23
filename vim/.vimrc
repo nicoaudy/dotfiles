@@ -81,8 +81,8 @@ map <silent> sL <C-w>>
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
 " nuvola, summerfruit256, github-light
-set background=light
-colorscheme solarized8
+set background=dark
+colorscheme hybrid
 
 set linespace=15
 set number
