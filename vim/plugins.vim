@@ -30,6 +30,7 @@ Plug 'lambdalisue/battery.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-scripts/nuvola.vim'
 Plug 'vim-scripts/summerfruit256.vim'
+Plug 'arzg/vim-colors-xcode'
 
 " Code Tools
 Plug 'mattn/emmet-vim'
