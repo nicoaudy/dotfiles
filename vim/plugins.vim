@@ -23,7 +23,6 @@ Plug 'leafgarland/typescript-vim'
 " Display
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/battery.vim'
 
 " Colorscheme

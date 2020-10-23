@@ -326,10 +326,6 @@ let g:lightline#bufferline#show_number = 0
 
 let g:battery#component_format = '%s %v%% '
 
-function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
 function! LightlineModified()
     return &modified ? '●' : ''
 endfunction

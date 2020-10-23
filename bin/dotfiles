@@ -30,6 +30,7 @@ sub_help () {
     echo "   hosts            Run hosts script"
     echo "   defaults         Run MacOS defaults script"
     echo "   dock             Run MacOS dock script"
+    echo "   starship         Setup starship config"
 }
 
 sub_update () {
@@ -93,6 +94,11 @@ sub_defaults () {
 sub_dock () {
     . "$DOTFILES_DIR/macos/dock.sh"
     echo -e "${GREEN}$ARROW Success! MacOS dock command finished.${NC}"
+}
+
+sub_starship () {
+    . "$DOTFILES_DIR/install/starship.sh"
+    echo -e "${GREEN}$ARROW Success! Setup config starship finished.${NC}"
 }
 
 case $COMMAND_NAME in
