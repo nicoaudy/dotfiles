@@ -3,16 +3,16 @@ add_newline = false
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]
-success_symbol = "🔥 "
+success_symbol = "🦄 "
 
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
 
 [battery]
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
 
 [[battery.display]]
 threshold = 10
