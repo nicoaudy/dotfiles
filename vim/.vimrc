@@ -36,7 +36,8 @@ if exists("&relativenumber")
     au BufReadPost * set relativenumber
 endif
 " Display extra whitespace.
-set list listchars=tab:»·,trail:·
+"set list listchars=tab:»·,trail:·
+
 set autowrite
 " Copy paste enabled
 set pastetoggle=<F2>
@@ -77,10 +78,10 @@ map <silent> sL <C-w>>
 "---------------------
 
 " favorite scheme :
-" PaperColor, deep-space, dracula, industry, deep-space,
+" PaperColor, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
-" nuvola, summerfruit256, github-light
+" nuvola, summerfruit256, github-light, xcodedark
 set background=dark
 colorscheme desert
 
@@ -93,7 +94,7 @@ set showmatch
 if (has('termguicolors'))
   set termguicolors
 
-  colorscheme xcodedark
+  colorscheme desert
 
   " Gui option
   hi LineNr guibg=bg
