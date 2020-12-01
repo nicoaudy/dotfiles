@@ -40,6 +40,7 @@ Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+Plug 'rhysd/git-messenger.vim'
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 

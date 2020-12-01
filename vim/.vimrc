@@ -94,7 +94,7 @@ set showmatch
 if (has('termguicolors'))
   set termguicolors
 
-  colorscheme desert
+  colorscheme xcodedark
 
   " Gui option
   hi LineNr guibg=bg
