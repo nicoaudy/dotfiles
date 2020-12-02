@@ -164,8 +164,8 @@ nmap <Leader>f :tag<space>
 let g:material_theme_style = 'palenight'
 
 " ----- fzf/fzf.vim settings -----
-map <leader>f :Files<CR>
-map <C-P> :GFiles<CR>
+map <C-P> :Files<CR>
+map <C-G> :GFiles<CR>
 map <C-B> :Buffer<CR>
 
 " ----- scrooloose/nerdtree settings -----
