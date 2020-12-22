@@ -55,10 +55,10 @@ set splitbelow
 set splitright
 
 " Quick jumping between splits
-map sk <C-w>h
-map sh <C-w>k
-map sl <C-w>j
-map sj <C-w>l
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
 
 " Open new splits easily
 nmap ss :split<Return><C-w>w
