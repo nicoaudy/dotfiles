@@ -12,6 +12,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'aaren/arrowkeyrepurpose'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
 
 " PHP Related
 Plug 'StanAngeloff/php.vim'

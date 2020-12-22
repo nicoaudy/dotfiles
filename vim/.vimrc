@@ -98,7 +98,7 @@ if (has('termguicolors'))
 
   " Gui option
   hi LineNr guibg=bg
-  set guifont=Dank\ Mono:h12
+  set guifont=Dank\ Mono:h13
   set guioptions-=l
   set guioptions-=L
   set guioptions-=r
@@ -163,10 +163,35 @@ nmap <Leader>f :tag<space>
 " ----- kaicataldo/material.vim settings -----
 let g:material_theme_style = 'palenight'
 
+" ----- romgrk/barbar.nvim settings -----
+" Magic buffer-picking mode
+nnoremap <silent> <Leader><Leader>s :BufferPick<CR>
+" Sort automatically by...
+nnoremap <silent> <Leader><Leader>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <Leader><Leader>bl :BufferOrderByLanguage<CR>
+" Move to previous/next
+nnoremap <silent>    <Leader><Leader>p :BufferPrevious<CR>
+nnoremap <silent>    <Leader><Leader>n :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <Leader><Leader>< :BufferMovePrevious<CR>
+nnoremap <silent>    <Leader><Leader>> :BufferMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <Leader><Leader>1 :BufferGoto 1<CR>
+nnoremap <silent>    <Leader><Leader>2 :BufferGoto 2<CR>
+nnoremap <silent>    <Leader><Leader>3 :BufferGoto 3<CR>
+nnoremap <silent>    <Leader><Leader>4 :BufferGoto 4<CR>
+nnoremap <silent>    <Leader><Leader>5 :BufferGoto 5<CR>
+nnoremap <silent>    <Leader><Leader>6 :BufferGoto 6<CR>
+nnoremap <silent>    <Leader><Leader>7 :BufferGoto 7<CR>
+nnoremap <silent>    <Leader><Leader>8 :BufferGoto 8<CR>
+nnoremap <silent>    <Leader><Leader>9 :BufferLast<CR>
+" Close buffer
+nnoremap <silent>    <Leader><Leader>c :BufferClose<CR>
+
 " ----- fzf/fzf.vim settings -----
 map <C-P> :Files<CR>
 map <C-G> :GFiles<CR>
-map <C-B> :Buffer<CR>
+map <C-B> :Buffers<CR>
 
 " ----- scrooloose/nerdtree settings -----
 let NERDTreeHijackNetw = 0
@@ -492,5 +517,5 @@ endfunction
 nnoremap <silent> yot :call <SID>ToggleTerminal('J', 6)<CR>
 
 " Toggle terminal - right
-nnoremap <silent> yo<c-t> :call <SID>ToggleTerminal('L', 60)<CR>
+nnoremap <silent> yor :call <SID>ToggleTerminal('L', 60)<CR>
 :tnoremap <Esc> <C-\><C-n>
