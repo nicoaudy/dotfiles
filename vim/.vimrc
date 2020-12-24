@@ -165,33 +165,33 @@ let g:material_theme_style = 'palenight'
 
 " ----- romgrk/barbar.nvim settings -----
 " Magic buffer-picking mode
-nnoremap <silent> <Leader><Leader>s :BufferPick<CR>
+nnoremap <silent> <C-B>s :BufferPick<CR>
 " Sort automatically by...
-nnoremap <silent> <Leader><Leader>bd :BufferOrderByDirectory<CR>
-nnoremap <silent> <Leader><Leader>bl :BufferOrderByLanguage<CR>
+nnoremap <silent> <C-B>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <C-B>bl :BufferOrderByLanguage<CR>
 " Move to previous/next
-nnoremap <silent>    <Leader><Leader>p :BufferPrevious<CR>
-nnoremap <silent>    <Leader><Leader>n :BufferNext<CR>
+nnoremap <silent>    <C-B>p :BufferPrevious<CR>
+nnoremap <silent>    <C-B>n :BufferNext<CR>
 " Re-order to previous/next
-nnoremap <silent>    <Leader><Leader>< :BufferMovePrevious<CR>
-nnoremap <silent>    <Leader><Leader>> :BufferMoveNext<CR>
+nnoremap <silent>    <C-B>< :BufferMovePrevious<CR>
+nnoremap <silent>    <C-B>> :BufferMoveNext<CR>
 " Goto buffer in position...
-nnoremap <silent>    <Leader><Leader>1 :BufferGoto 1<CR>
-nnoremap <silent>    <Leader><Leader>2 :BufferGoto 2<CR>
-nnoremap <silent>    <Leader><Leader>3 :BufferGoto 3<CR>
-nnoremap <silent>    <Leader><Leader>4 :BufferGoto 4<CR>
-nnoremap <silent>    <Leader><Leader>5 :BufferGoto 5<CR>
-nnoremap <silent>    <Leader><Leader>6 :BufferGoto 6<CR>
-nnoremap <silent>    <Leader><Leader>7 :BufferGoto 7<CR>
-nnoremap <silent>    <Leader><Leader>8 :BufferGoto 8<CR>
-nnoremap <silent>    <Leader><Leader>9 :BufferLast<CR>
+nnoremap <silent>    <C-B>1 :BufferGoto 1<CR>
+nnoremap <silent>    <C-B>2 :BufferGoto 2<CR>
+nnoremap <silent>    <C-B>3 :BufferGoto 3<CR>
+nnoremap <silent>    <C-B>4 :BufferGoto 4<CR>
+nnoremap <silent>    <C-B>5 :BufferGoto 5<CR>
+nnoremap <silent>    <C-B>6 :BufferGoto 6<CR>
+nnoremap <silent>    <C-B>7 :BufferGoto 7<CR>
+nnoremap <silent>    <C-B>8 :BufferGoto 8<CR>
+nnoremap <silent>    <C-B>9 :BufferLast<CR>
 " Close buffer
-nnoremap <silent>    <Leader><Leader>c :BufferClose<CR>
+nnoremap <silent>    <C-B>c :BufferClose<CR>
 
 " ----- fzf/fzf.vim settings -----
 map <C-P> :Files<CR>
 map <C-G> :GFiles<CR>
-map <C-B> :Buffers<CR>
+map <C-B>b :Buffers<CR>
 
 " ----- scrooloose/nerdtree settings -----
 let NERDTreeHijackNetw = 0
