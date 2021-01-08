@@ -14,6 +14,7 @@ Plug 'matze/vim-move'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
+Plug 'pechorin/any-jump.vim'
 
 " PHP Related
 Plug 'StanAngeloff/php.vim'

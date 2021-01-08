@@ -42,6 +42,7 @@ brew install ctags
 brew install --HEAD neovim
 brew install tmux
 brew install tableplus
+brew install the_silver_searcher
 
 # Binaries
 brew install tree
