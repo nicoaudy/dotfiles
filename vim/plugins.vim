@@ -15,6 +15,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'pechorin/any-jump.vim'
+Plug 'machakann/vim-sandwich'
 
 " PHP Related
 Plug 'StanAngeloff/php.vim'
