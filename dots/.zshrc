@@ -134,3 +134,5 @@ alias ls='ls -G'
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
+
+alias sail='bash vendor/bin/sail'

@@ -21,6 +21,9 @@ Plug 'machakann/vim-sandwich'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
 
+" Golang Related
+Plug 'fatih/vim-go'
+
 " JS Related
 Plug 'leafgarland/typescript-vim'
 

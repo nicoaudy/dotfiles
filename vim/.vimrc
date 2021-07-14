@@ -94,7 +94,8 @@ set showmatch
 if (has('termguicolors'))
   set termguicolors
 
-  colorscheme xcodedark
+	set background=dark
+  colorscheme desert
 
   " Gui option
   hi LineNr guibg=bg
@@ -398,7 +399,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-svelte', 'coc-go', 'coc-rls']
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-go', 'coc-rls']
 
 let g:coc_snippet_next = '<tab>'
 
@@ -407,6 +408,9 @@ let g:coc_snippet_next = '<tab>'
 " AUTOCOMMAND
 "
 "---------------------
+
+"Go spesific missing import on save
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 "Automatically source the vimrc file on save.
 augroup autosourcing
@@ -428,6 +432,9 @@ autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
+" set filetypes as blade.php as html
+autocmd BufNewFile,BufRead *.blade.php set filetype=html
 
 " Lightline
 autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
