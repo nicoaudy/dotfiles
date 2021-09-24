@@ -26,6 +26,7 @@ Plug 'fatih/vim-go'
 
 " JS Related
 Plug 'leafgarland/typescript-vim'
+Plug 'pantharshit00/vim-prisma'
 
 " Display
 Plug 'itchyny/lightline.vim'

@@ -12,6 +12,7 @@
 		"javascript",
 		"javascriptreact",
 		"vue",
-		"php"
+		"php",
+		"prisma"
 	]
 }

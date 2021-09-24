@@ -81,9 +81,9 @@ map <silent> sL <C-w>>
 " PaperColor, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
-" nuvola, summerfruit256, github-light, xcodedark
+" nuvola, summerfruit256, github-light, xcodedark, jumper
 set background=dark
-colorscheme desert
+colorscheme purify
 
 set linespace=15
 set number
@@ -95,7 +95,7 @@ if (has('termguicolors'))
   set termguicolors
 
 	set background=dark
-  colorscheme desert
+  colorscheme purify
 
   " Gui option
   hi LineNr guibg=bg
@@ -399,7 +399,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-go', 'coc-rls']
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-go', 'coc-rls', 'coc-prisma']
 
 let g:coc_snippet_next = '<tab>'
 
