@@ -83,7 +83,7 @@ map <silent> sL <C-w>>
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
 " nuvola, summerfruit256, github-light, xcodedark, jumper
 set background=dark
-colorscheme purify
+colorscheme night-owl
 
 set linespace=15
 set number
@@ -95,7 +95,7 @@ if (has('termguicolors'))
   set termguicolors
 
 	set background=dark
-  colorscheme purify
+  colorscheme night-owl
 
   " Gui option
   hi LineNr guibg=bg
@@ -105,6 +105,9 @@ if (has('termguicolors'))
   set guioptions-=r
   set guioptions-=R
 endif
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Use 256 colors. This is the useful for terminal vim.
 set t_CO=256
@@ -306,7 +309,7 @@ augroup END
 
 " ----- itchyny/lightline settings -----
 let g:lightline = {
-\   'colorscheme': 'PaperColor',
+\   'colorscheme': 'nightowl',
 \   'active': {
 \     'left': [
 \       [ 'mode', 'paste' ],

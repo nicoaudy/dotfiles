@@ -38,6 +38,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-scripts/nuvola.vim'
 Plug 'vim-scripts/summerfruit256.vim'
 Plug 'arzg/vim-colors-xcode'
+Plug 'haishanh/night-owl.vim'
 
 " Code Tools
 Plug 'mattn/emmet-vim'
@@ -51,6 +52,7 @@ Plug 'honza/vim-snippets'
 Plug 'rhysd/git-messenger.vim'
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
 " Pairs
 Plug 'jiangmiao/auto-pairs'
