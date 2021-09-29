@@ -164,9 +164,6 @@ nmap <Leader>f :tag<space>
 "
 "---------------------
 
-" ----- kaicataldo/material.vim settings -----
-let g:material_theme_style = 'palenight'
-
 " ----- romgrk/barbar.nvim settings -----
 " Magic buffer-picking mode
 nnoremap <silent> <C-B>s :BufferPick<CR>
@@ -377,14 +374,14 @@ set guioptions-=e  " Don't use GUI tabline
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
-set tags=~/.vimtags,tags;
+" set tags=~/.vimtags,tags;
 
 " Sensible defaults
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
-let g:easytags_resolve_links = 1
-let g:easytags_suppress_ctags_warning = 1
+" let g:easytags_events = ['BufReadPost', 'BufWritePost']
+" let g:easytags_async = 1
+" let g:easytags_dynamic_files = 2
+" let g:easytags_resolve_links = 1
+" let g:easytags_suppress_ctags_warning = 1
 
 " ----- airblade/vim-gitgutter settings -----
 " Required after having changed the colorscheme

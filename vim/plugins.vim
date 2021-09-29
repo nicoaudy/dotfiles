@@ -3,13 +3,11 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 " Garam  kehidupan
-Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'aaren/arrowkeyrepurpose'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -35,8 +33,6 @@ Plug 'lambdalisue/battery.vim'
 
 " Colorscheme
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'vim-scripts/nuvola.vim'
-Plug 'vim-scripts/summerfruit256.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'haishanh/night-owl.vim'
 
@@ -47,9 +43,6 @@ Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
 Plug 'ap/vim-css-color'
 Plug 'sheerun/vim-polyglot'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'rhysd/git-messenger.vim'
 
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
@@ -57,10 +50,6 @@ Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 " Pairs
 Plug 'jiangmiao/auto-pairs'
 Plug 'Valloric/MatchTagAlways'
-
-" Tags
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
 
 " Syntax Checking
 Plug 'w0rp/ale'
@@ -86,6 +75,15 @@ Plug 'neomake/neomake'
 " Plug 'kaicataldo/material.vim'
 " Plug 'tsuyoshicho/StatuslineUpdateTimer.vim'
 " Plug 'tpope/vim-fugitive'
+" Plug 'marcweber/vim-addon-mw-utils'
+" Plug 'aaren/arrowkeyrepurpose'
+" Plug 'vim-scripts/nuvola.vim'
+" Plug 'vim-scripts/summerfruit256.vim'
+" Plug 'rhysd/git-messenger.vim'
+" Plug 'garbas/vim-snipmate'
+" Plug 'honza/vim-snippets'
+" Plug 'xolox/vim-misc'
+" Plug 'xolox/vim-easytags'
 
 call plug#end()            " required
 filetype plugin indent on    " required
