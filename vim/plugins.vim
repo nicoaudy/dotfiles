@@ -10,19 +10,19 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'pechorin/any-jump.vim'
 Plug 'machakann/vim-sandwich'
 
-" PHP Related
+" Nvim
+Plug 'neomake/neomake'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+
+" Language Spesific
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
-
-" Golang Related
 Plug 'fatih/vim-go'
-
-" JS Related
 Plug 'leafgarland/typescript-vim'
 Plug 'pantharshit00/vim-prisma'
 
@@ -30,22 +30,17 @@ Plug 'pantharshit00/vim-prisma'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'lambdalisue/battery.vim'
-
-" Colorscheme
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'arzg/vim-colors-xcode'
 Plug 'haishanh/night-owl.vim'
 
 " Code Tools
-Plug 'mattn/emmet-vim'
-Plug 'Yggdroot/indentLine'
 Plug 'SirVer/ultisnips'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
+Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
+Plug 'mattn/emmet-vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
 Plug 'sheerun/vim-polyglot'
-
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
 " Pairs
 Plug 'jiangmiao/auto-pairs'
@@ -64,26 +59,6 @@ Plug 'scrooloose/syntastic', { 'do': function('Installjshint') }
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" Vim etc
-Plug 'moll/vim-bbye'
-
-" Neovim Spesific
-Plug 'neomake/neomake'
-
-" Unused
-" Plug 'kaicataldo/material.vim'
-" Plug 'tsuyoshicho/StatuslineUpdateTimer.vim'
-" Plug 'tpope/vim-fugitive'
-" Plug 'marcweber/vim-addon-mw-utils'
-" Plug 'aaren/arrowkeyrepurpose'
-" Plug 'vim-scripts/nuvola.vim'
-" Plug 'vim-scripts/summerfruit256.vim'
-" Plug 'rhysd/git-messenger.vim'
-" Plug 'garbas/vim-snipmate'
-" Plug 'honza/vim-snippets'
-" Plug 'xolox/vim-misc'
-" Plug 'xolox/vim-easytags'
 
 call plug#end()            " required
 filetype plugin indent on    " required

@@ -71,6 +71,12 @@ map <silent> sJ <C-W>-
 map <silent> sK <C-W>+
 map <silent> sL <C-w>>
 
+"Disable arrow key
+noremap <up> :echo "🙅 use k instead!"<CR>
+noremap <down> :echo "🙅 use j instead!"<CR>
+noremap <left> :echo "🙅 use h instead!"<CR>
+noremap <right> :echo "🙅 use l instead!"<CR>
+
 "---------------------
 "
 " VISUALS
@@ -165,6 +171,12 @@ nmap <Leader>f :tag<space>
 "---------------------
 
 " ----- romgrk/barbar.nvim settings -----
+let bufferline.icons = v:false
+let bufferline.icon_separator_active = '🐱'
+let bufferline.icon_separator_inactive = '▎'
+let bufferline.icon_close_tab = ''
+let bufferline.icon_close_tab_modified = '●'
+
 " Magic buffer-picking mode
 nnoremap <silent> <C-B>s :BufferPick<CR>
 " Sort automatically by...
@@ -232,10 +244,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-" ----- moll/vim-bbye settings -----
-:nnoremap <Leader><Leader>q :Bdelete<CR>
-:nnoremap <Leader><Leader>w :Bwipeout<CR>
-
 " ----- w0rp/ale settings -----
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
@@ -249,8 +257,6 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-" let g:ale_php_phpcs_standard='phpcs.xml.dist'
-" let g:ale_php_phpmd_ruleset='phpmd.xml'
 let g:ale_fixers = {
   \ '*': ['remove_trailing_lines', 'trim_whitespace'],
   \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
@@ -277,7 +283,6 @@ set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 let g:syntastic_quiet_messages={'level': 'warnings'}
@@ -285,7 +290,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" let g:syntastic_javascript_checkers = ['eshint', 'jsxhint', 'jshint']
 let g:syntastic_javascript_checkers = ['eshint']
 
 " Run NeoMake on read and write operations
@@ -371,17 +375,6 @@ endfunction
 
 set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
-
-" ----- xolox/vim-easytags settings -----
-" Where to look for tags files
-" set tags=~/.vimtags,tags;
-
-" Sensible defaults
-" let g:easytags_events = ['BufReadPost', 'BufWritePost']
-" let g:easytags_async = 1
-" let g:easytags_dynamic_files = 2
-" let g:easytags_resolve_links = 1
-" let g:easytags_suppress_ctags_warning = 1
 
 " ----- airblade/vim-gitgutter settings -----
 " Required after having changed the colorscheme
