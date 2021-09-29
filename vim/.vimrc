@@ -171,12 +171,6 @@ nmap <Leader>f :tag<space>
 "---------------------
 
 " ----- romgrk/barbar.nvim settings -----
-let bufferline.icons = v:false
-let bufferline.icon_separator_active = '🐱'
-let bufferline.icon_separator_inactive = '▎'
-let bufferline.icon_close_tab = ''
-let bufferline.icon_close_tab_modified = '●'
-
 " Magic buffer-picking mode
 nnoremap <silent> <C-B>s :BufferPick<CR>
 " Sort automatically by...
