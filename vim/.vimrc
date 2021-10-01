@@ -87,7 +87,7 @@ noremap <right> :echo "🙅 use l instead!"<CR>
 " PaperColor, dracula, industry, deep-space,
 " minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
-" nuvola, summerfruit256, github-light, xcodedark, jumper
+" night-owl, github-light, xcodedark, jumper
 set background=dark
 colorscheme night-owl
 
@@ -194,6 +194,25 @@ nnoremap <silent>    <C-B>8 :BufferGoto 8<CR>
 nnoremap <silent>    <C-B>9 :BufferLast<CR>
 " Close buffer
 nnoremap <silent>    <C-B>c :BufferClose<CR>
+
+" NOTE: If barbar's option dict isn't created yet, create it
+let bufferline = get(g:, 'bufferline', {})
+
+let bufferline.icons = v:false
+let bufferline.icon_custom_colors = v:true
+
+" Configure icons on the bufferline.
+let bufferline.icon_separator_active = '👉'
+let bufferline.icon_separator_inactive = '▎'
+let bufferline.icon_close_tab = ''
+let bufferline.icon_close_tab_modified = '●'
+let bufferline.icon_pinned = '車'
+
+" Sets the maximum padding width with which to surround each tab.
+let bufferline.maximum_padding = 4
+
+" Sets the maximum buffer name length.
+let bufferline.maximum_length = 30
 
 " ----- fzf/fzf.vim settings -----
 map <C-P> :Files<CR>

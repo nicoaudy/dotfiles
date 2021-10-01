@@ -10,7 +10,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'romgrk/barbar.nvim'
 Plug 'pechorin/any-jump.vim'
 Plug 'machakann/vim-sandwich'
 
@@ -18,6 +17,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'neomake/neomake'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+Plug 'romgrk/barbar.nvim'
 
 " Language Spesific
 Plug 'StanAngeloff/php.vim'
