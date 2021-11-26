@@ -12,6 +12,7 @@ Plug 'matze/vim-move'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'pechorin/any-jump.vim'
 Plug 'machakann/vim-sandwich'
+Plug 'dyng/ctrlsf.vim'
 
 " Nvim
 Plug 'neomake/neomake'
@@ -25,6 +26,7 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'pantharshit00/vim-prisma'
+Plug 'evanleck/vim-svelte'
 
 " Display
 Plug 'itchyny/lightline.vim'

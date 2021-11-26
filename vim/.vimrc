@@ -89,7 +89,7 @@ noremap <right> :echo "🙅 use l instead!"<CR>
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
 " night-owl, github-light, xcodedark, jumper
 set background=dark
-colorscheme night-owl
+colorscheme one
 
 set linespace=15
 set number
@@ -101,7 +101,7 @@ if (has('termguicolors'))
   set termguicolors
 
 	set background=dark
-  colorscheme night-owl
+  colorscheme one
 
   " Gui option
   hi LineNr guibg=bg
@@ -214,6 +214,31 @@ let bufferline.maximum_padding = 4
 " Sets the maximum buffer name length.
 let bufferline.maximum_length = 30
 
+" ----- dyng/ctrlsf.vim settings -----
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
+let g:ctrlsf_search_mode = 'async'
+let g:ctrlsf_auto_preview = 1
+let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_compact_position = 'bottom_inside'
+let g:ctrlsf_winsize = '30%'
+let g:ctrlsf_auto_close = {
+    \ "normal" : 1,
+    \ "compact": 1
+    \}
+let g:ctrlsf_auto_focus = {
+    \ "at": "start"
+    \ }
+
+
 " ----- fzf/fzf.vim settings -----
 map <C-P> :Files<CR>
 map <C-G> :GFiles<CR>
@@ -255,7 +280,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " ----- prettier/vim-prettier settings -----
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat_require_pragma = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.svelte PrettierAsync
 
 " ----- w0rp/ale settings -----
 let g:ale_lint_on_text_changed = 'never'
@@ -397,6 +424,11 @@ hi clear SignColumn
 
 " ----- neoclide/coc settings -----
 inoremap <silent><expr> <c-space> coc#refresh()
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -405,7 +437,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists',  'coc-tsserver', 'coc-snippets', 'coc-go', 'coc-rls', 'coc-prisma']
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists', 'coc-tsserver', 'coc-snippets', 'coc-go', 'coc-rls', 'coc-prisma', 'coc-svelte']
 
 let g:coc_snippet_next = '<tab>'
 

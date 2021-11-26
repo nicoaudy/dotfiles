@@ -1,6 +1,7 @@
 {
 	"emmet.includeLanguages": {
 		"vue-html": "html",
+		"svelte": "html",
 		"javascript": "javascriptreact"
 	},
 	"prettier.tslintIntegration": true,
@@ -13,6 +14,7 @@
 		"javascriptreact",
 		"vue",
 		"php",
-		"prisma"
+		"prisma",
+		"svelte"
 	]
 }
