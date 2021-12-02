@@ -247,7 +247,8 @@ map <C-B>b :Buffers<CR>
 " ----- scrooloose/nerdtree settings -----
 let NERDTreeHijackNetw = 0
 let NERDTreeShowHidden=1
-nmap <Leader>` :NERDTreeToggle<cr>
+nnoremap <expr> <Leader>n g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
+nmap <Leader>N :NERDTreeFind<cr>
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
 " close the nerdtree when file is open
