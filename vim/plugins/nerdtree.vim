@@ -1,4 +1,5 @@
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 let NERDTreeHijackNetw = 0
 let NERDTreeShowHidden=1
