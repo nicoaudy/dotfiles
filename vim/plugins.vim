@@ -3,64 +3,52 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 " Garam  kehidupan
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
-Plug 'matze/vim-move'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'pechorin/any-jump.vim'
-Plug 'machakann/vim-sandwich'
-Plug 'dyng/ctrlsf.vim'
+so ~/.vim/plugins/surround.vim
+so ~/.vim/plugins/commentary.vim
+so ~/.vim/plugins/nerdtree.vim
+so ~/.vim/plugins/fzf.vim
+so ~/.vim/plugins/move.vim
+so ~/.vim/plugins/multiple-cursors.vim
+so ~/.vim/plugins/any-jump.vim
+so ~/.vim/plugins/sandwich.vim
+so ~/.vim/plugins/ctrlsf.vim
 
-" Nvim
-Plug 'neomake/neomake'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
-Plug 'romgrk/barbar.nvim'
+" Nvim Spesific
+if(has('nvim'))
+  so ~/.vim/plugins/nvim/neomake.vim
+  so ~/.vim/plugins/nvim/coc.vim
+  so ~/.vim/plugins/nvim/barbar.vim
+endif
 
 " Language Spesific
-Plug 'StanAngeloff/php.vim'
-Plug 'stephpy/vim-php-cs-fixer'
-Plug 'fatih/vim-go'
-Plug 'leafgarland/typescript-vim'
-Plug 'pantharshit00/vim-prisma'
-Plug 'evanleck/vim-svelte'
+so ~/.vim/plugins/php.vim
+so ~/.vim/plugins/go.vim
+so ~/.vim/plugins/typescript.vim
+so ~/.vim/plugins/prisma.vim
+so ~/.vim/plugins/svelte.vim
 
 " Display
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
-Plug 'lambdalisue/battery.vim'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'arzg/vim-colors-xcode'
-Plug 'haishanh/night-owl.vim'
+so ~/.vim/plugins/lightline.vim
+so ~/.vim/plugins/colorscheme.vim
 
 " Code Tools
-Plug 'SirVer/ultisnips'
-Plug 'Yggdroot/indentLine'
-Plug 'ap/vim-css-color'
-Plug 'mattn/emmet-vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
-Plug 'sheerun/vim-polyglot'
+so ~/.vim/plugins/ultisnips.vim
+so ~/.vim/plugins/indend.vim
+so ~/.vim/plugins/css-color.vim
+so ~/.vim/plugins/emmet.vim
+so ~/.vim/plugins/prettier.vim
+so ~/.vim/plugins/polglot.vim
 
 " Pairs
-Plug 'jiangmiao/auto-pairs'
-Plug 'Valloric/MatchTagAlways'
+so ~/.vim/plugins/autopairs.vim
+so ~/.vim/plugins/match-tag-always.vim
 
 " Syntax Checking
-Plug 'w0rp/ale'
-
-function! Installjshint(info)
-  if a:info.status == 'installed' || a:info.force
-    !npm install -g jshint
-  endif
-endfunction
-Plug 'scrooloose/syntastic', { 'do': function('Installjshint') }
+so ~/.vim/plugins/ale.vim
+so ~/.vim/plugins/syntastic.vim
 
 " Git
-Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+so ~/.vim/plugins/gitgutter.vim
 
 call plug#end()            " required
 filetype plugin indent on    " required

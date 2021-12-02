@@ -6,9 +6,10 @@ syntax enable
 
 " VIM CONFIG.
 "
+let mapleader=','
+
 set encoding=utf-8
 set backspace=indent,eol,start
-let mapleader=','
 set number
 set noswapfile
 set noerrorbells visualbell t_vb=
@@ -31,14 +32,18 @@ set nostartofline
 set showmode
 set title
 set showcmd
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
 if exists("&relativenumber")
     set relativenumber
     au BufReadPost * set relativenumber
 endif
+
 " Display extra whitespace.
 "set list listchars=tab:»·,trail:·
 
 set autowrite
+
 " Copy paste enabled
 set pastetoggle=<F2>
 set clipboard=unnamed
@@ -118,13 +123,6 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Use 256 colors. This is the useful for terminal vim.
 set t_CO=256
 
-" Indent line
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-" Vim move
-let g:move_key_modifier = 'C'
-
-
 "---------------------
 "
 " MAPPINGS
@@ -170,277 +168,8 @@ nmap <Leader>f :tag<space>
 "
 "---------------------
 
-" ----- romgrk/barbar.nvim settings -----
-" Magic buffer-picking mode
-nnoremap <silent> <C-B>s :BufferPick<CR>
-" Sort automatically by...
-nnoremap <silent> <C-B>bd :BufferOrderByDirectory<CR>
-nnoremap <silent> <C-B>bl :BufferOrderByLanguage<CR>
-" Move to previous/next
-nnoremap <silent>    <C-B>p :BufferPrevious<CR>
-nnoremap <silent>    <C-B>n :BufferNext<CR>
-" Re-order to previous/next
-nnoremap <silent>    <C-B>< :BufferMovePrevious<CR>
-nnoremap <silent>    <C-B>> :BufferMoveNext<CR>
-" Goto buffer in position...
-nnoremap <silent>    <C-B>1 :BufferGoto 1<CR>
-nnoremap <silent>    <C-B>2 :BufferGoto 2<CR>
-nnoremap <silent>    <C-B>3 :BufferGoto 3<CR>
-nnoremap <silent>    <C-B>4 :BufferGoto 4<CR>
-nnoremap <silent>    <C-B>5 :BufferGoto 5<CR>
-nnoremap <silent>    <C-B>6 :BufferGoto 6<CR>
-nnoremap <silent>    <C-B>7 :BufferGoto 7<CR>
-nnoremap <silent>    <C-B>8 :BufferGoto 8<CR>
-nnoremap <silent>    <C-B>9 :BufferLast<CR>
-" Close buffer
-nnoremap <silent>    <C-B>c :BufferClose<CR>
-
-" NOTE: If barbar's option dict isn't created yet, create it
-let bufferline = get(g:, 'bufferline', {})
-
-let bufferline.icons = v:false
-let bufferline.icon_custom_colors = v:true
-
-" Configure icons on the bufferline.
-let bufferline.icon_separator_active = '👉'
-let bufferline.icon_separator_inactive = '▎'
-let bufferline.icon_close_tab = ''
-let bufferline.icon_close_tab_modified = '●'
-let bufferline.icon_pinned = '車'
-
-" Sets the maximum padding width with which to surround each tab.
-let bufferline.maximum_padding = 4
-
-" Sets the maximum buffer name length.
-let bufferline.maximum_length = 30
-
-" ----- dyng/ctrlsf.vim settings -----
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-
-let g:ctrlsf_search_mode = 'async'
-let g:ctrlsf_auto_preview = 1
-let g:ctrlsf_default_view_mode = 'compact'
-let g:ctrlsf_position = 'bottom'
-let g:ctrlsf_compact_position = 'bottom_inside'
-let g:ctrlsf_winsize = '30%'
-let g:ctrlsf_auto_close = {
-    \ "normal" : 1,
-    \ "compact": 1
-    \}
-let g:ctrlsf_auto_focus = {
-    \ "at": "start"
-    \ }
-
-
-" ----- fzf/fzf.vim settings -----
-map <C-P> :Files<CR>
-map <C-G> :GFiles<CR>
-map <C-B>b :Buffers<CR>
-
-" ----- scrooloose/nerdtree settings -----
-let NERDTreeHijackNetw = 0
-let NERDTreeShowHidden=1
-nnoremap <expr> <Leader>n g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
-nmap <Leader>N :NERDTreeFind<cr>
-nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
-
-" close the nerdtree when file is open
-" let NERDTreeQuitOnOpen = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
 "https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
 vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
-
-" ----- mattn/emmet-vim settings -----
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,php,javascript,jsx,typescript,tsx,eruby,vue EmmetInstall
-let g:user_emmet_leader_key='<Leader>z'
-
-" ----- Valloric/MatchTagAlways settings -----
-let g:mta_use_matchparen_group = 1
-let g:mta_filetypes = {
-    \ 'html' : 1,
-    \ 'javascript.jsx' : 1,
-    \ 'javascript' : 1,
-    \}
-
-" ----- SirVer/ultisnips settings -----
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-" ----- prettier/vim-prettier settings -----
-let g:prettier#autoformat = 0
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat_require_pragma = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html,*.svelte PrettierAsync
-
-" ----- w0rp/ale settings -----
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_open_list = 0  					" Disabled popup👧
-let g:ale_keep_list_window_open=0
-let g:ale_set_quickfix=0
-let g:ale_list_window_size = 5
-let g:ale_php_phpcbf_standard='PSR2'
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-highlight ALEErrorSign ctermbg=NONE ctermfg=red
-highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-let g:ale_fixers = {
-  \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-  \ 'php': ['phpcbf', 'php_cs_fixer', 'remove_trailing_lines', 'trim_whitespace'],
-  \ 'javascript': ['eslint'],
-  \ 'svelte': ['eslint', 'prettier', 'prettier_standard'],
-  \}
-let g:ale_fix_on_save = 1
-let g:ale_sign_column_always = 1
-let g:ale_linters = {
-\   'php': ['php'],
-\   'svelte': ['styleling', 'eslint'],
-\}
-
-command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
-map <c-s> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
-
-" ----- stephpy/vim-php-cs-fixer settings -----
-nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
-nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
-autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
-
-" ----- vim-syntastic/syntastic settings -----
-set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_error_symbol = '✘'
-let g:syntastic_warning_symbol = "▲"
-let g:syntastic_quiet_messages={'level': 'warnings'}
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eshint']
-
-" Run NeoMake on read and write operations
-autocmd! BufReadPost,BufWritePost * Neomake
-
-" Disable inherited syntastic
-let g:syntastic_mode_map = {
-  \ "mode": "passive",
-  \ "active_filetypes": [],
-  \ "passive_filetypes": [] }
-let g:neomake_serialize = 1
-let g:neomake_serialize_abort_on_error = 1
-
-augroup mySyntastic
-  au!
-  au FileType tex let b:syntastic_mode = "passive"
-augroup END
-
-" ----- itchyny/lightline settings -----
-let g:lightline = {
-\   'colorscheme': 'nightowl',
-\   'active': {
-\     'left': [
-\       [ 'mode', 'paste' ],
-\       [ 'fugitive', 'readonly', 'filename', 'modified' ]
-\     ],
-\     'right': [
-\       [ 'battery', 'filetype' ]
-\     ]
-\   },
-\   'component': {
-\     'lineinfo': ' %3l:%-2v',
-\   },
-\   'component_function': {
-\     'fugitive': 'LightlineFugitive',
-\     'readonly': 'LightlineReadonly',
-\     'modified': 'LightlineModified',
-\     'filetype': 'MyFiletype',
-\     'battery': 'battery#component'
-\   }
-\}
-let g:lightline.separator = {
-\   'left': '', 'right': ''
-\}
-let g:lightline.subseparator = {
-\   'left': '', 'right': ''
-\}
-let g:lightline.tabline = {
-\   'left': [['buffers']],
-\   'right': [['string1'], ['string2']]
-\}
-let g:lightline.component_expand = {
-\   'buffers': 'lightline#bufferline#buffers'
-\}
-let g:lightline.component_type = {
-\   'buffers': 'tabsel'
-\}
-let g:lightline#bufferline#unnamed = "[NO NAME]"
-let g:lightline#bufferline#filename_modifier= ":."
-let g:lightline#bufferline#more_buffers = "..."
-let g:lightline#bufferline#modified = " +"
-let g:lightline#bufferline#read_only = " -"
-let g:lightline#bufferline#shorten_path = 1
-let g:lightline#bufferline#show_number = 0
-
-let g:battery#component_format = '%s %v%% '
-
-function! LightlineModified()
-    return &modified ? '●' : ''
-endfunction
-
-function! LightlineReadonly()
-    return &readonly ? '' : ''
-endfunction
-
-function! LightlineFugitive()
-    if exists('*FugitiveStatusline') || exists('*fugitive#head')
-        let branch = fugitive#head()
-        return branch !=# '' ? ' '.branch : ''
-    endif
-    return ''
-endfunction
-
-set showtabline=2  " Show tabline
-set guioptions-=e  " Don't use GUI tabline
-
-" ----- airblade/vim-gitgutter settings -----
-" Required after having changed the colorscheme
-hi clear SignColumn
-" In vim-airline, only display hunks if the diff is non-zero
-
-
-" ----- neoclide/coc settings -----
-inoremap <silent><expr> <c-space> coc#refresh()
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
-
-let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-vetur', 'coc-phpls', 'coc-css', 'coc-html', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists', 'coc-tsserver', 'coc-snippets', 'coc-go', 'coc-rls', 'coc-prisma', 'coc-svelte']
-
-let g:coc_snippet_next = '<tab>'
 
 "---------------------
 "
@@ -474,28 +203,6 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 " set filetypes as blade.php as html
 autocmd BufNewFile,BufRead *.blade.php set filetype=html
-
-" Lightline
-autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
-
-let g:jsx_ext_required = 1
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key='<leader>z'
-let g:user_emmet_settings={
-\ 'javascript' : {
-\   'extends' : 'jsx',
-\    'default_attributes' : {
-\      'label': [{'htmlFor': ' '}],
-\      'class': { 'className': ' '},
-\    },
-\  },
-\}
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
