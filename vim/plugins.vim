@@ -29,7 +29,6 @@ so ~/.vim/plugins/lightline.vim
 so ~/.vim/plugins/colorscheme.vim
 
 " Code Tools
-so ~/.vim/plugins/ultisnips.vim
 so ~/.vim/plugins/indend.vim
 so ~/.vim/plugins/css-color.vim
 so ~/.vim/plugins/emmet.vim
