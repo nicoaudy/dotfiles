@@ -22,10 +22,7 @@ endif
 
 " Language Spesific
 so ~/.vim/plugins/php.vim
-so ~/.vim/plugins/go.vim
-so ~/.vim/plugins/typescript.vim
 so ~/.vim/plugins/prisma.vim
-so ~/.vim/plugins/svelte.vim
 
 " Display
 so ~/.vim/plugins/lightline.vim
