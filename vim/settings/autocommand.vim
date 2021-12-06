@@ -11,6 +11,12 @@ autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.org
 augroup autosourcing
     autocmd!
     autocmd BufWritePost .vimrc source %
+    autocmd BufWritePost autocommand.vim source $MYVIMRC
+    autocmd BufWritePost plugins.vim source $MYVIMRC
+    autocmd BufWritePost mappings.vim source $MYVIMRC
+    autocmd BufWritePost split.vim source $MYVIMRC
+    autocmd BufWritePost terminal.vim source $MYVIMRC
+    autocmd BufWritePost visuals.vim source $MYVIMRC
 augroup END
 
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2

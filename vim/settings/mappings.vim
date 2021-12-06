@@ -38,7 +38,9 @@ noremap <Leader>w <C-w>w
 
 ""Open vimrc easily.
 nmap <Leader>ev :tabe ~/.vimrc<cr>
-nmap <Leader>es :e ~/.vim/snippets/
+nmap <Leader>es :tabe ~/.vim/settings/visuals.vim<cr>
+nmap <Leader>ea :tabe ~/.vim/settings/autocommand.vim<cr>
+nmap <Leader>em :tabe ~/.vim/settings/mappings.vim<cr>
 nmap <Leader>ep :tabe ~/.vim/plugins.vim<cr>
 
 "Delete hightlight search.
@@ -47,7 +49,6 @@ nmap <Leader>f :tag<space>
 
 "https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
 vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
-
 
 " Toggle terminal - bottom
 nnoremap <silent> yot :call <SID>ToggleTerminal('J', 6)<CR>
