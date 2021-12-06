@@ -54,3 +54,10 @@ function! s:ToggleTerminal(side, size) abort
   " open new terminal
   call PutTermPanel(0, a:side, a:size)
 endfunction
+
+" Toggle terminal - bottom
+nnoremap <silent> yot :call <SID>ToggleTerminal('J', 6)<CR>
+
+" Toggle terminal - right
+nnoremap <silent> yor :call <SID>ToggleTerminal('L', 60)<CR>
+:tnoremap <Esc> <C-\><C-n>

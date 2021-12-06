@@ -49,10 +49,3 @@ nmap <Leader>f :tag<space>
 
 "https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
 vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
-
-" Toggle terminal - bottom
-nnoremap <silent> yot :call <SID>ToggleTerminal('J', 6)<CR>
-
-" Toggle terminal - right
-nnoremap <silent> yor :call <SID>ToggleTerminal('L', 60)<CR>
-:tnoremap <Esc> <C-\><C-n>
