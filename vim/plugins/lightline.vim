@@ -1,6 +1,5 @@
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'lambdalisue/battery.vim'
 
 
 let g:lightline = {
@@ -11,7 +10,7 @@ let g:lightline = {
 \       [ 'fugitive', 'readonly', 'filename', 'modified' ]
 \     ],
 \     'right': [
-\       [ 'battery', 'filetype' ]
+\       [ 'filetype' ]
 \     ]
 \   },
 \   'component': {
@@ -22,7 +21,6 @@ let g:lightline = {
 \     'readonly': 'LightlineReadonly',
 \     'modified': 'LightlineModified',
 \     'filetype': 'MyFiletype',
-\     'battery': 'battery#component'
 \   }
 \}
 let g:lightline.separator = {
@@ -48,8 +46,6 @@ let g:lightline#bufferline#modified = " +"
 let g:lightline#bufferline#read_only = " -"
 let g:lightline#bufferline#shorten_path = 1
 let g:lightline#bufferline#show_number = 0
-
-let g:battery#component_format = '%s %v%% '
 
 function! LightlineModified()
     return &modified ? '●' : ''
