@@ -36,8 +36,3 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 " set filetypes as blade.php as html
 autocmd BufNewFile,BufRead *.blade.php set filetype=html
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction

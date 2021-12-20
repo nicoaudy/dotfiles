@@ -10,7 +10,7 @@
 " purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
 " night-owl, github-light, xcodedark, jumper
 set background=dark
-colorscheme gruvbox
+colorscheme tender
 
 set linespace=15
 set number
@@ -22,7 +22,7 @@ if (has('termguicolors'))
   set termguicolors
 
 	set background=dark
-  colorscheme gruvbox
+  colorscheme tender
 
   " Gui option
   hi LineNr guibg=bg
