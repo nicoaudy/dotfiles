@@ -47,5 +47,5 @@ nmap <Leader>ep :tabe ~/.vim/plugins.vim<cr>
 nmap <Leader><space> :nohlsearch<cr>
 nmap <Leader>f :tag<space>
 
-"https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
-vmap <Leader>su ! awk '{ print length(), $0 | "sort -n | cut -d\\ -f2-" }'<cr>
+" https://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
+vmap <Leader>su ! awk '{ print length(), $0 <bar> "sort -n <bar> cut -d\\  -f2-" }'<cr>
