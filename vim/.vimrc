@@ -40,7 +40,7 @@ set pastetoggle=<F2>
 set clipboard=unnamed
 set timeoutlen=1000
 set ttimeoutlen=0
-set list listchars=tab:»·,trail:· " Display extra whitespace.
+" set list listchars=tab:»·,trail:· " Display extra whitespace.
 if exists("&relativenumber")
     set relativenumber
     au BufReadPost * set relativenumber

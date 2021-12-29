@@ -5,12 +5,9 @@
 "---------------------
 
 " favorite scheme :
-" PaperColor, dracula, industry, deep-space,
-" minimalist, bold-contrast, hybrid, gruvbox, desert, focuspoint
-" purify, coffee, dogrun, flattened_light, hybrid_reverse, purify
-" night-owl, github-light, xcodedark, jumper
+" PaperColor, night-owl, xcodedark, jumper,
 set background=dark
-colorscheme xcodedark
+colorscheme solarized8
 
 set linespace=15
 set number
@@ -22,7 +19,7 @@ if (has('termguicolors'))
   set termguicolors
 
 	set background=dark
-  colorscheme xcodedark
+  colorscheme solarized8
 
   " Gui option
   hi LineNr guibg=bg

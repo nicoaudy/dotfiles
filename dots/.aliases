@@ -27,14 +27,18 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 # Fast open
 alias o="open ."
 
+# You must install Pygments first - "sudo easy_install Pygments"
+alias cat='pygmentize -O style=monokai -f console256 -g'
+
 # List all files colorized in long format
 alias l="ls -laF"
 
 # Redis
 alias flush-redis="redis-cli FLUSHALL"
 
-# VSCode
+# Editor
 alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
+alias vi="vim"
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
@@ -69,16 +73,14 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias hostfile="sudo vi /etc/hosts"
 alias sshconfig="vi ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
 alias -g @="| grep -i"
 
 # Docker
-if which docker >/dev/null; then
-    alias dcrm="docker container rm $(docker container ls -aq)"
-    alias dirm="docker image rm $(docker image ls -aq)"
-fi
+# if which docker >/dev/null; then
+#     alias dcrm="docker container rm $(docker container ls -aq)"
+#     alias dirm="docker image rm $(docker image ls -aq)"
+# fi
 
 if which tmux >/dev/null; then
    # alias ide="tmux split-window -v -p 30;tmux split-window -h -p 66;tmux split-window -h -p 50"
@@ -88,5 +90,3 @@ fi
 if which composer >/dev/null; then
    alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 fi
-
-alias vi="vim"
