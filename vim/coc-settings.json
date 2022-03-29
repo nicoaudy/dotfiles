@@ -6,9 +6,10 @@
 	},
 	"prettier.tslintIntegration": true,
 	"prettier.eslintIntegration": false,
+	"prettier.printWidth": 120,
 	"coc.preferences.formatOnSaveFiletypes": [
 		"css",
-		"Markdown",
+		"markdown",
 		"typescript",
 		"javascript",
 		"javascriptreact",

@@ -32,6 +32,7 @@ sub_help () {
     echo "   defaults         Run MacOS defaults script"
     echo "   dock             Run MacOS dock script"
     echo "   starship         Setup starship config"
+    echo "   switch-php       Change PHP version"
 }
 
 sub_update () {
@@ -105,6 +106,11 @@ sub_dock () {
 sub_starship () {
     . "$DOTFILES_DIR/install/starship.sh"
     echo -e "${GREEN}$ARROW Success! Setup config starship finished.${NC}"
+}
+
+sub_switch-php() {
+    . "$DOTFILES_DIR/install/switch-php.sh"
+    echo -e "${GREEN}$ARROW Success! Switch PHP version finished.${NC}"
 }
 
 case $COMMAND_NAME in
