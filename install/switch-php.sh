@@ -30,8 +30,14 @@ echo "Will use version $version"
 # now change to the requested version
 if which valet >/dev/null; then
 	valet use $version --force
+	rm ~/.config/valet/valet.sock
+	valet restart
 fi
 
 if which composer >/dev/null; then
 	composer global update
+fi
+
+if which zsh >/dev/null; then
+	source ~/.zshrc
 fi

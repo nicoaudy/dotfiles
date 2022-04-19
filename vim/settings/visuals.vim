@@ -7,7 +7,7 @@
 " favorite scheme :
 " PaperColor, night-owl, xcodedark, jumper,
 set background=dark
-colorscheme solarized8
+colorscheme darkplus
 
 set linespace=15
 set number
@@ -19,7 +19,7 @@ if (has('termguicolors'))
   set termguicolors
 
 	set background=dark
-  colorscheme solarized8
+  colorscheme darkplus
 
   " Gui option
   hi LineNr guibg=bg
