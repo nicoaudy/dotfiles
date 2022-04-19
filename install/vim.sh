@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ -f $HOME/.config/nvim/init.lua ]; then
+  rm $HOME/.config/nvim/init.lua 
+  rm -rf $HOME/.config/nvim/lua
+fi
+
 mkdir -p $HOME/.vim/
 #cp -i "$DOTFILES_DIR/vim/.vimrc" $HOME/.vimrc
 #cp -i "$DOTFILES_DIRvim/plugins.vim" $HOME/.vim/plugins.vim

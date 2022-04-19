@@ -27,6 +27,7 @@ sub_help () {
     echo "   valet            Run valet script"
     echo "   ohmyzsh          Run oh my zsh script"
     echo "   vim              Run vim script"
+    echo "   luavim           Install lua vim configuration"
     echo "   tmux             Run Tmux script"
     echo "   hosts            Run hosts script"
     echo "   defaults         Run MacOS defaults script"
@@ -81,6 +82,11 @@ sub_ohmyzsh () {
 sub_vim () {
     . "$DOTFILES_DIR/install/vim.sh"
     echo -e "${GREEN}$ARROW Success! Oh vim command finished.${NC}"
+}
+
+sub_luavim () {
+    . "$DOTFILES_DIR/install/lua_vim.sh"
+    echo -e "${GREEN}$ARROW Success! Oh lua vim command finished.${NC}"
 }
 
 sub_tmux () {
