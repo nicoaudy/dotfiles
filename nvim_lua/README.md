@@ -1,6 +1,10 @@
 # Nvim config
 ## For personal usage
 
+## Requirements
+- brew install [ripgrep](https://github.com/BurntSushi/ripgrep)
+- brew install [fd](https://github.com/sharkdp/fd)
+
 # KeyMap Cheat-Sheet
 
 For anyone who is just starting with this neovim config!
