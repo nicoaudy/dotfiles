@@ -122,12 +122,12 @@ cmp.setup {
     select = false,
   },
   window = {
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    }
+    documentation = cmp.config.window.bordered(),
   },
   experimental = {
     ghost_text = false,
+  },
+  view = {
     native_menu = false,
   },
 }
