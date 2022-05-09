@@ -13,9 +13,9 @@ null_ls.setup({
 	sources = {
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
     formatting.phpcsfixer,
-    diagnostics.php
-		-- formatting.black.with({ extra_args = { "--fast" } }),
-		-- formatting.stylua,
-    -- diagnostics.flake8
+    diagnostics.php,
+    diagnostics.eslint,
+    null_ls.builtins.code_actions.eslint,
+		formatting.stylua,
 	},
 })
