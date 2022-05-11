@@ -52,17 +52,18 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
-  -- use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim"         -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "terryma/vim-multiple-cursors"            -- Multicursor <C-n>
+  use "tpope/vim-surround"                      -- Surrounding text
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use "EdenEast/nightfox.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"                        -- The completion plugin
