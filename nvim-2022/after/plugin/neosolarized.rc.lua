@@ -1,7 +1,7 @@
 local status, n = pcall(require, 'neosolarized')
 if (not status) then return end
 
-n.setup({ commits_italic = true })
+n.setup({ comment_italics = true })
 
 local colorbuddy = require('colorbuddy.init')
 local Color = colorbuddy.Color
