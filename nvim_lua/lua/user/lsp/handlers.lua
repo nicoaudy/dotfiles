@@ -19,8 +19,7 @@ M.setup = function()
     -- show signs
     signs = {
       active = signs,
-    },
-    update_in_insert = true,
+    }, update_in_insert = true,
     underline = true,
     severity_sort = true,
     float = {
@@ -60,10 +59,10 @@ local function lsp_highlight_document(client)
   end
 
   -- Format on save
-  if client.server_capabilities.document_formatting then
+  if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
 end
@@ -87,9 +86,9 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  if client.name == "tsserver" then
-    client.server_capabilities.document_formatting = false
-  end
+  --[[ if client.name == "tsserver" then ]]
+  --[[   client.server_capabilities.document_formatting = false ]]
+  --[[ end ]]
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
