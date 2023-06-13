@@ -31,7 +31,11 @@ alias o="open ."
 alias cat='pygmentize -O style=monokai -f console256 -g'
 
 # List all files colorized in long format
-alias l="ls -laF"
+if which exa >/dev/null; then
+  alias ls="exa --icons"
+  alias la="exa -la --icons"
+  alias l="exa -l --icons"
+fi
 
 # Redis
 alias flush-redis="redis-cli FLUSHALL"
