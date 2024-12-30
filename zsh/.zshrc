@@ -79,9 +79,6 @@ alias nah="git stash && git reset --hard && git clean -df"
 # HACK: For Running Go Server using Air
 alias air='$(go env GOPATH)/bin/air'
 
-# other Aliases shortcuts
-alias c="clear"
-
 # Fast open
 alias o="open ."
 alias f='open -a Finder '
