@@ -9,4 +9,10 @@ export PATH
 PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
 export PATH
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ $(uname -m) == "arm64" ]]; then
+  # M1/M2 chip (Apple Silicon)
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  # Intel chip
+  eval "$(/usr/local/bin/brew shellenv)"
+fi

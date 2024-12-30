@@ -39,6 +39,7 @@ brew install zsh-syntax-highlighting
 brew install stow
 brew install fzf
 brew install bat
+brew install eza
 brew install fd
 brew install bitwarden-cli
 brew install httpie
@@ -59,8 +60,6 @@ brew install starship
 brew install tree-sitter
 brew install tree
 brew install borders
-
-brew install tableplus
 
 ### dev things
 brew install node
