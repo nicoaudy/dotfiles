@@ -41,15 +41,11 @@ brew install fzf
 brew install bat
 brew install eza
 brew install fd
-brew install bitwarden-cli
 brew install httpie
 brew install lua
 brew install luajit
 brew install luarocks
-brew install prettier
 brew install make
-brew install qmk
-brew install ripgrep
 
 ### Terminal
 brew install git
@@ -60,14 +56,15 @@ brew install starship
 brew install tree-sitter
 brew install tree
 brew install borders
+brew install orbstack
 
 ### dev things
-brew install node
 brew install nvm
 brew install sqlite
 
 ## Casks
 brew install --cask raycast
+brew install --cask ghostty
 brew install --cask font-hack-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-sf-pro

@@ -16,6 +16,13 @@ export NVM_DIR="$HOME/.nvm"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# bun completions
+[ -s "/$HOME/.bun/_bun" ] && source "/$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Go Path
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
@@ -71,7 +78,9 @@ export FZF_TMUX_OPTS=" -p90%,70% "
 export LANG=en_US.UTF-8
 
 # because I'm to lazy to write vim
-alias v='nvim'
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
 
 # Git
 alias a="git add ."
@@ -116,6 +125,9 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# Code hightlight with bat instead of cat
+alias cat='bat'
+
 # Utils
 alias hostfile="sudo v /etc/hosts"
 alias sshconfig="v ~/.ssh/config"
@@ -130,6 +142,9 @@ alias hideall='defaults write com.apple.finder AppleShowAllFiles NO && killall F
 # Get rid of those pesky .DS_Store files recursively
 alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
 alias dsclean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
+
+# IP addresses
+alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # lazygit
 alias lg="lazygit"

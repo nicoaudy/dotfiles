@@ -16,3 +16,6 @@ else
   # Intel chip
   eval "$(/usr/local/bin/brew shellenv)"
 fi
+
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
