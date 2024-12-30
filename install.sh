@@ -33,12 +33,15 @@ brew tap FelixKratz/formulae
 ## Formulae
 echo "Installing Brew Formulae..."
 ### Must Have things
+brew install wget
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 brew install stow
 brew install fzf
 brew install bat
 brew install fd
+brew install bitwarden-cli
+brew install httpie
 brew install lua
 brew install luajit
 brew install luarocks
