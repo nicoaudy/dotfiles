@@ -69,6 +69,12 @@ export LANG=en_US.UTF-8
 # because I'm to lazy to write vim
 alias v='nvim'
 
+# Git
+alias a="git add ."
+alias c="git commit -m"
+alias s="git status"
+alias nah="git stash && git reset --hard && git clean -df"
+
 # These alias need to have the same exact space as written here
 # HACK: For Running Go Server using Air
 alias air='$(go env GOPATH)/bin/air'
@@ -83,7 +89,6 @@ alias fh='open -a Finder .'
 
 # Tmux 
 alias tmux="tmux -f $TMUX_CONF"
-alias a="attach"
 
 # fzf 
 # opens documentation through fzf (eg: git,zsh etc.)
