@@ -65,6 +65,7 @@ brew install sqlite
 ## Casks
 brew install --cask raycast
 brew install --cask ghostty
+brew install --cask karabiner-elements
 brew install --cask font-hack-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-sf-pro
@@ -89,6 +90,6 @@ cd $HOME/dotfiles || exit
 
 # Stow dotfiles packages
 echo "Stowing dotfiles..."
-stow -t ~ ghostty nvim starship tmux zsh
+stow -t ~ ghostty nvim starship tmux zsh karabiner
 
 echo "Dotfiles setup complete!"
