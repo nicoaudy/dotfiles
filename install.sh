@@ -90,6 +90,6 @@ cd $HOME/dotfiles || exit
 
 # Stow dotfiles packages
 echo "Stowing dotfiles..."
-stow -t ~ ghostty nvim starship tmux zsh karabiner
+stow -t ~ git ghostty nvim starship tmux zsh karabiner
 
 echo "Dotfiles setup complete!"
