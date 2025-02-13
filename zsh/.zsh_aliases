@@ -1,0 +1,71 @@
+# because I'm to lazy to write vim
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+
+# Git
+alias a="git add ."
+alias c="git commit -m"
+alias s="git status"
+alias nah="git stash && git reset --hard && git clean -df"
+
+# These alias need to have the same exact space as written here
+# HACK: For Running Go Server using Air
+alias air='$(go env GOPATH)/bin/air'
+
+# Fast open
+alias o="open ."
+alias f='open -a Finder '
+alias fh='open -a Finder .'
+
+# Tmux 
+alias tmux="tmux -f $TMUX_CONF"
+
+# fzf 
+# opens documentation through fzf (eg: git,zsh etc.)
+alias fman="compgen -c | fzf | xargs man"
+
+# Next level of an ls 
+# options :  --no-filesize --no-time --no-permissions 
+alias ls="eza --no-filesize --long --color=always --icons=always --no-user" 
+
+# tree
+alias tree="tree -L 3 -a -I '.git' --charset X "
+alias dtree="tree -L 3 -a -d -I '.git' --charset X "
+
+# git aliases
+alias gt="git"
+alias ga="git add ."
+alias gs="git status -s"
+alias gc='git commit -m'
+alias glog='git log --oneline --graph --all'
+
+# Move
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Code hightlight with bat instead of cat
+alias cat='bat'
+
+# Utils
+alias hostfile="sudo v /etc/hosts"
+alias sshconfig="v ~/.ssh/config"
+
+# Show/hide hidden files in Finder
+# Usefull stuff for presentation and seeing dotfiles
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias showall='defaults write com.apple.finder AppleShowAllFiles YES && killall Finder'
+alias hideall='defaults write com.apple.finder AppleShowAllFiles NO && killall Finder'
+
+# Get rid of those pesky .DS_Store files recursively
+alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
+alias dsclean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
+
+# IP addresses
+alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# lazygit
+alias lg="lazygit"

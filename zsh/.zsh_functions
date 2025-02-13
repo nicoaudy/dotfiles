@@ -1,0 +1,5 @@
+touchfile () {
+    local file="$1"
+    mkdir -p -- "$(dirname -- "$file")" &&
+        touch -- "$file"
+}
